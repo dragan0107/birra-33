@@ -3,16 +3,82 @@ header {
 }
 
 .nav-information {
-  @include flex-align-center;
-  justify-content: flex-end;
-  height: 2.84em;
+  @include flex-center-all;
+  height: 2.85em;
   background: $nav-dark-brown;
   color: $nav-brown-yellow;
-  font-size: 0.75em;
   @include fira-sans($fw: 400);
 }
 .nav-information-wrapper {
-  // width: 60%;
-  .working-days {
+  @include flex-align-center;
+  justify-content: flex-end;
+  width: 60%;
+}
+.working-days,
+.shopping-box {
+  font-size: 0.75em;
+}
+.working-days {
+  margin-top: 4px;
+}
+
+.shopping-box {
+  margin: 1.5em;
+  color: white;
+}
+
+.socials-top {
+  // margin-left: 2.31em;
+  @include flex-align-center;
+  margin-top: 1px;
+}
+.social-icon-box {
+  @include flex-center-all;
+  border-radius: 50%;
+  height: 1.375em;
+  width: 1.375em;
+  background: #30211b;
+  margin-right: 3.5px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  i {
+    font-size: 0.6em;
+  }
+  &:hover {
+    background: $nav-brown-yellow;
+    i {
+      color: #30211b;
+    }
+  }
+}
+
+.navbar-wrapper {
+  @include flex-center-all;
+  background: $orange-brown;
+  height: 5.125em;
+}
+.navigation-bar {
+  @include flex-align-center;
+  justify-content: space-between;
+  width: 62%;
+  display: flex;
+  .navbar-links {
+    // @include flex-align-center;
+    @include flex-center-all;
+    // justify-content: space-between;
+    list-style: none;
+    margin-bottom: 0;
+  }
+}
+
+.navbar-link {
+  // height: 100%;
+  padding: 1.8em 1em;
+  @include fira-sans($fw: 500);
+  color: #f4e8ce;
+  cursor: pointer;
+  &:hover {
+    background: #83351a;
+    color: $nav-brown-yellow;
   }
 }
