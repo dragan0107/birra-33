@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Fira+Sans:wght@400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.nav-information {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 2.84em;
+  background: #44322c;
+  color: #e1a03a;
+  font-size: 0.75em;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+}

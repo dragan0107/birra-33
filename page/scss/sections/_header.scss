@@ -1,0 +1,18 @@
+header {
+  width: 100%;
+}
+
+.nav-information {
+  @include flex-align-center;
+  justify-content: flex-end;
+  height: 2.84em;
+  background: $nav-dark-brown;
+  color: $nav-brown-yellow;
+  font-size: 0.75em;
+  @include fira-sans($fw: 400);
+}
+.nav-information-wrapper {
+  // width: 60%;
+  .working-days {
+  }
+}

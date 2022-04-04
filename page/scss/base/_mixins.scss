@@ -1,0 +1,35 @@
+@mixin flex-justify-center($direction: null) {
+  display: flex;
+  justify-content: center;
+  @if ($direction) {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin flex-align-center($direction: null) {
+  display: flex;
+  align-items: center;
+  @if ($direction) {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin flex-center-all($direction: null) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @if ($direction) {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin fira-sans($fw) {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: $fw;
+}
