@@ -1,0 +1,8 @@
+@import './sections/shop-sidebar';
+@import './sections/shop-beer-list';
+
+.shop-content-shop {
+  @include flex-justify-center;
+  align-items: flex-start;
+  margin-top: 7.875em;
+}

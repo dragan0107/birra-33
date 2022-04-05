@@ -1,15 +1,16 @@
-#catalogue {
+#shop {
   @include flex-center-all;
   padding: 6.25em 0 6.05em;
-  background: $catalogue-bgd;
+  background: $shop-bgd;
 }
-.catalogue-content {
+.shop-content {
+  @include flex-center-all($direction: column);
   width: 62%;
 }
 
 .shopbtn {
   @include flex-center-all;
-  color: $catalogue-bgd;
+  color: $shop-bgd;
   font-family: $alegreya;
   border: none;
   cursor: pointer;

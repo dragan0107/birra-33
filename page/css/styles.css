@@ -147,7 +147,7 @@ header {
   width: 16.4em;
   color: #f4e8ce;
   opacity: 0;
-  transition: all 0.33s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.13, 0.77, 0.73, 0.98);
   z-index: -1;
 }
 
@@ -222,7 +222,7 @@ header {
   color: #bf431f;
 }
 
-#catalogue {
+#shop {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,7 +231,11 @@ header {
   background: #f4e8ce;
 }
 
-.catalogue-content {
+.shop-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 62%;
 }
 
@@ -249,14 +253,14 @@ header {
   font-size: 1.06em;
 }
 
-.catalogue-content__goldbeer-wrapper {
+.shop-content__goldbeer-wrapper {
   background: url("/page/images/jumbo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 7.81em 0;
 }
 
-.catalogue-content__goldbeer {
+.shop-content__goldbeer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,13 +268,13 @@ header {
   padding: 2.31em 6.18em 1.06em;
   text-align: center;
 }
-.catalogue-content__goldbeer h1 {
+.shop-content__goldbeer h1 {
   font-family: "Alegreya", serif;
   font-size: 4em;
   color: white;
   margin-bottom: 0.3em;
 }
-.catalogue-content__goldbeer p {
+.shop-content__goldbeer p {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   color: #eee2c8;
@@ -278,13 +282,92 @@ header {
   line-height: 1.3em;
 }
 
-.catalogue-content__goldbeer--btn {
+.shop-content__goldbeer--btn {
   width: 17.56em;
   height: 3.68em;
   margin-top: 2.4em;
   background: #bf431f;
   transition: all 0.3s ease-in-out;
 }
-.catalogue-content__goldbeer--btn:hover {
+.shop-content__goldbeer--btn:hover {
   background: #7a3319;
+}
+
+.shop-sidebar-wrapper,
+.shop-cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.shop-sidebar-wrapper {
+  background-color: #e3cfab;
+  width: 16.87em;
+}
+
+.shop-cart {
+  border-bottom: 1px solid #f4e8ce;
+}
+
+.shop-cart,
+.shop-categories {
+  padding: 2em 2em 3em;
+}
+
+.shop-sidebar__title {
+  font-family: "Alegreya", serif;
+  font-size: 1.125em;
+  color: #bf431f;
+  margin-top: 1.35em;
+  margin-bottom: 1.45em;
+}
+
+.shop-cart__info {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: white;
+  margin-bottom: 1.5em;
+}
+
+.shop-categories__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shop-categories__list-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 0.72em;
+}
+.shop-categories__list-item a {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #44322c;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.shop-categories__list-item a:hover {
+  color: #e1a03a;
+}
+
+.shop-categories__list-item--lastchild {
+  margin-bottom: 0;
+}
+
+.shop-categ-arrow {
+  color: #e1a03a;
+  font-size: 0.8em;
+  margin-right: 0.6em;
+}
+
+.shop-content-shop {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 7.875em;
 }

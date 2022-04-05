@@ -1,11 +1,11 @@
-.catalogue-content__goldbeer-wrapper {
+.shop-content__goldbeer-wrapper {
   background: url('/page/images/jumbo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 7.81em 0;
 }
 
-.catalogue-content__goldbeer {
+.shop-content__goldbeer {
   @include flex-center-all($direction: column);
   padding: 2.31em 6.18em 1.06em;
   text-align: center;
@@ -24,7 +24,7 @@
   }
 }
 
-.catalogue-content__goldbeer--btn {
+.shop-content__goldbeer--btn {
   width: 17.56em;
   height: 3.68em;
   margin-top: 2.4em;

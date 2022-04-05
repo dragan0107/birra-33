@@ -1,0 +1,61 @@
+.shop-sidebar-wrapper,
+.shop-cart {
+  @include flex-justify-center($direction: column);
+  text-align: left;
+}
+
+.shop-sidebar-wrapper {
+  background-color: $light-brown;
+  width: 16.87em;
+}
+.shop-cart {
+  border-bottom: 1px solid $shop-bgd;
+}
+.shop-cart,
+.shop-categories {
+  padding: 2em 2em 3em;
+}
+
+.shop-sidebar__title {
+  font-family: $alegreya;
+  font-size: 1.125em;
+  color: $orange-brown;
+  margin-top: 1.35em;
+  margin-bottom: 1.45em;
+}
+.shop-cart__info {
+  @include fira-sans($fw: 500);
+  font-size: 0.875em;
+  color: white;
+  margin-bottom: 1.5em;
+}
+
+.shop-categories__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shop-categories__list-item {
+  @include flex-align-center;
+  margin-bottom: 0.72em;
+  a {
+    @include fira-sans($fw: 500);
+    font-size: 0.875em;
+    color: $nav-dark-brown;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $nav-brown-yellow;
+    }
+  }
+}
+
+.shop-categories__list-item--lastchild {
+  margin-bottom: 0;
+}
+
+.shop-categ-arrow {
+  color: $nav-brown-yellow;
+  font-size: 0.8em;
+  margin-right: 0.6em;
+}
