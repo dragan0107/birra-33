@@ -2,48 +2,47 @@ header {
   width: 100%;
 }
 
-.nav-information {
+//
+
+.nav-info-wrapper {
   @include flex-center-all;
   height: 2.85em;
   background: $nav-dark-brown;
   color: $nav-brown-yellow;
   @include fira-sans($fw: 400);
 }
-.nav-information-wrapper {
+.nav-info {
   @include flex-align-center;
   justify-content: flex-end;
   width: 60%;
 }
-.working-days,
-.shopping-box {
+.nav-info__workdays,
+.nav-info__cart {
   font-size: 0.75em;
 }
-.working-days {
+.nav-info__workdays {
   margin-top: 4px;
 }
 
-.shopping-box {
+.nav-info__cart {
   margin: 1.5em;
   color: white;
 }
 
-.socials-top {
-  // margin-left: 2.31em;
+.socials {
   @include flex-align-center;
+}
+.socials--top {
+  // margin-left: 2.31em;
   margin-top: 1px;
 }
-.social-icon-box {
+.socials__icon-box {
   @include flex-center-all;
-  border-radius: 50%;
-  height: 1.375em;
-  width: 1.375em;
+  // border-radius: 50%;
   background: #30211b;
   margin-right: 3.5px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  i {
-    font-size: 0.6em;
-  }
   &:hover {
     background: $nav-brown-yellow;
     i {
@@ -52,33 +51,82 @@ header {
   }
 }
 
-.navbar-wrapper {
+.socials__icon-box--top {
+  height: 1.375em;
+  width: 1.375em;
+  i {
+    font-size: 0.6em;
+  }
+}
+
+// NAVBAR
+
+.navibar-wrapper {
   @include flex-center-all;
   background: $orange-brown;
   height: 5.125em;
 }
-.navigation-bar {
+.navibar {
   @include flex-align-center;
   justify-content: space-between;
   width: 62%;
   display: flex;
-  .navbar-links {
-    // @include flex-align-center;
+  .navibar__links {
     @include flex-center-all;
-    // justify-content: space-between;
     list-style: none;
     margin-bottom: 0;
+    margin-right: 1.2em;
   }
 }
+.navibar__logo {
+  margin-left: 0.15em;
+}
 
-.navbar-link {
+.navibar__link {
   // height: 100%;
   padding: 1.8em 1em;
   @include fira-sans($fw: 500);
   color: #f4e8ce;
   cursor: pointer;
   &:hover {
-    background: #83351a;
+    background: $hover-brown;
     color: $nav-brown-yellow;
   }
+}
+
+.features-menu {
+  position: relative;
+}
+
+.features-links {
+  list-style: none;
+  @include flex-justify-center($direction: column);
+  @include fira-sans($fw: 500);
+  padding: 1.3em;
+  background: $hover-brown;
+  width: 16.4em;
+  color: #f4e8ce;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.features__link {
+  font-size: 0.875em;
+
+  &:hover {
+    color: $nav-brown-yellow;
+    cursor: pointer;
+  }
+}
+
+.features-links--menu1 {
+  position: absolute;
+  top: 150%;
+}
+
+.features-menu:hover .features-links {
+  z-index: 1;
+  opacity: 1;
+  top: 100%;
 }

@@ -9,7 +9,7 @@ header {
   width: 100%;
 }
 
-.nav-information {
+.nav-info-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ header {
   font-weight: 400;
 }
 
-.nav-information-wrapper {
+.nav-info {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -29,51 +29,56 @@ header {
   width: 60%;
 }
 
-.working-days,
-.shopping-box {
+.nav-info__workdays,
+.nav-info__cart {
   font-size: 0.75em;
 }
 
-.working-days {
+.nav-info__workdays {
   margin-top: 4px;
 }
 
-.shopping-box {
+.nav-info__cart {
   margin: 1.5em;
   color: white;
 }
 
-.socials-top {
+.socials {
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+
+.socials--top {
   margin-top: 1px;
 }
 
-.social-icon-box {
+.socials__icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border-radius: 50%;
-  height: 1.375em;
-  width: 1.375em;
   background: #30211b;
   margin-right: 3.5px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-.social-icon-box i {
-  font-size: 0.6em;
-}
-.social-icon-box:hover {
+.socials__icon-box:hover {
   background: #e1a03a;
 }
-.social-icon-box:hover i {
+.socials__icon-box:hover i {
   color: #30211b;
 }
 
-.navbar-wrapper {
+.socials__icon-box--top {
+  height: 1.375em;
+  width: 1.375em;
+}
+.socials__icon-box--top i {
+  font-size: 0.6em;
+}
+
+.navibar-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +87,7 @@ header {
   height: 5.125em;
 }
 
-.navigation-bar {
+.navibar {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -90,23 +95,67 @@ header {
   width: 62%;
   display: flex;
 }
-.navigation-bar .navbar-links {
+.navibar .navibar__links {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   list-style: none;
   margin-bottom: 0;
+  margin-right: 1.2em;
 }
 
-.navbar-link {
+.navibar__logo {
+  margin-left: 0.15em;
+}
+
+.navibar__link {
   padding: 1.8em 1em;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
   color: #f4e8ce;
   cursor: pointer;
 }
-.navbar-link:hover {
+.navibar__link:hover {
   background: #83351a;
   color: #e1a03a;
+}
+
+.features-menu {
+  position: relative;
+}
+
+.features-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  padding: 1.3em;
+  background: #83351a;
+  width: 16.4em;
+  color: #f4e8ce;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.features__link {
+  font-size: 0.875em;
+}
+.features__link:hover {
+  color: #e1a03a;
+  cursor: pointer;
+}
+
+.features-links--menu1 {
+  position: absolute;
+  top: 150%;
+}
+
+.features-menu:hover .features-links {
+  z-index: 1;
+  opacity: 1;
+  top: 100%;
 }
