@@ -9,11 +9,27 @@ header {
   width: 100%;
 }
 
-.nav-info-wrapper {
+.nav-info-wrapper,
+.navibar-wrapper,
+.breadcrumbs-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+
+.nav-info,
+.navibar,
+.breadcrumbs {
+  width: 62%;
+}
+
+.nav-info,
+.breadcrumbs {
+  padding-right: 1.22em;
+}
+
+.nav-info-wrapper {
   height: 2.85em;
   background: #44322c;
   color: #e1a03a;
@@ -26,7 +42,6 @@ header {
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  width: 60%;
 }
 
 .nav-info__workdays,
@@ -79,10 +94,6 @@ header {
 }
 
 .navibar-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   background: #bf431f;
   height: 5.125em;
 }
@@ -92,7 +103,6 @@ header {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  width: 62%;
   display: flex;
 }
 .navibar .navibar__links {
@@ -121,7 +131,7 @@ header {
   color: #e1a03a;
 }
 
-.features-menu {
+.features-menu--parent {
   position: relative;
 }
 
@@ -132,12 +142,12 @@ header {
   flex-direction: column;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
-  padding: 1.3em;
+  padding: 1em 1.3em;
   background: #83351a;
   width: 16.4em;
   color: #f4e8ce;
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.33s ease-in-out;
   z-index: -1;
 }
 
@@ -149,13 +159,132 @@ header {
   cursor: pointer;
 }
 
-.features-links--menu1 {
+.features-links--menu1,
+.features-links--menu2 {
   position: absolute;
-  top: 150%;
 }
 
-.features-menu:hover .features-links {
+.features-links--menu1 {
+  top: 230%;
+}
+
+.features-links--menu2 {
+  opacity: 0;
+  top: 150%;
+  left: 100%;
+}
+
+.features-menu:hover .features-links--menu1 {
   z-index: 1;
   opacity: 1;
   top: 100%;
+}
+
+.pages-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pages-wrapper i {
+  font-size: 0.6em;
+}
+
+.pages-submenu:hover .features-links--menu2 {
+  opacity: 1;
+  z-index: 1;
+  top: 80%;
+}
+
+.breadcrumbs-wrapper {
+  background: #e3cfab;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 4.43em;
+}
+.breadcrumbs .breadcrumbs__shop {
+  font-family: "Alegreya", serif;
+  font-size: 1.5em;
+  color: #d57f2c;
+}
+.breadcrumbs .breadcrumbs__currentpage {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  color: #44322c;
+  cursor: pointer;
+}
+.breadcrumbs .breadcrumbs__currentpage:hover {
+  color: #bf431f;
+}
+
+#catalogue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 6.25em 0 6.05em;
+  background: #f4e8ce;
+}
+
+.catalogue-content {
+  width: 62%;
+}
+
+.shopbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #f4e8ce;
+  font-family: "Alegreya", serif;
+  border: none;
+  cursor: pointer;
+}
+.shopbtn span {
+  font-size: 1.06em;
+}
+
+.catalogue-content__goldbeer-wrapper {
+  background: url("/page/images/jumbo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7.81em 0;
+}
+
+.catalogue-content__goldbeer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.31em 6.18em 1.06em;
+  text-align: center;
+}
+.catalogue-content__goldbeer h1 {
+  font-family: "Alegreya", serif;
+  font-size: 4em;
+  color: white;
+  margin-bottom: 0.3em;
+}
+.catalogue-content__goldbeer p {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: #eee2c8;
+  font-size: 1.375em;
+  line-height: 1.3em;
+}
+
+.catalogue-content__goldbeer--btn {
+  width: 17.56em;
+  height: 3.68em;
+  margin-top: 2.4em;
+  background: #bf431f;
+  transition: all 0.3s ease-in-out;
+}
+.catalogue-content__goldbeer--btn:hover {
+  background: #7a3319;
 }

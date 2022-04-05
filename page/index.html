@@ -70,7 +70,7 @@
               <li class="navibar__link">BREWERY</li>
               <li class="navibar__link">EVENTS</li>
               <li class="navibar__link">RESERVATION</li>
-              <div class="features-menu">
+              <div class="features-menu features-menu--parent">
                 <li class="navibar__link">FEATURES</li>
                 <ul class="features-links features-links--menu1">
                   <li class="features__link">TEAM</li>
@@ -78,7 +78,19 @@
                   <li class="features__link">ABOUT-2</li>
                   <li class="features__link">SHOP</li>
                   <li class="features__link">GALLERY</li>
-                  <li class="features__link">PAGES</li>
+                  <div class="pages-submenu">
+                    <div class="pages-wrapper">
+                      <li class="features__link link-pages">PAGES</li>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <ul class="features-links features-links--menu2">
+                      <li class="features__link">SHORT CODES</li>
+                      <li class="features__link">TYPOGRAPHY</li>
+                      <li class="features__link">PAGE 404</li>
+                      <li class="features__link">SUPPORT</li>
+                      <li class="features__link">VIDEO TUTORIALS</li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
               <li class="navibar__link">BLOG</li>
@@ -86,9 +98,31 @@
             </ul>
           </nav>
         </div>
+        <div class="breadcrumbs-wrapper">
+          <div class="breadcrumbs">
+            <span class="breadcrumbs__shop">SHOP</span>
+            <div class="breadcrumbs__currentpage">HOME</div>
+          </div>
+        </div>
       </header>
     </section>
-    <div class="box2"></div>
+    <section id="catalogue">
+      <div class="catalogue-content">
+        <div class="catalogue-content__goldbeer-wrapper">
+          <!-- <img src="/page/images/jumbo.jpg" alt="" /> -->
+          <div class="catalogue-content__goldbeer">
+            <h1>Good Beer Brings People Together</h1>
+            <p>
+              That's why every one of our beers is crafted with the simple
+              purpose of helping people spend meaningful time with each other.
+            </p>
+            <button class="shopbtn catalogue-content__goldbeer--btn">
+              <span>SHOP NOW</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
