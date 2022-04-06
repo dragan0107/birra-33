@@ -45,7 +45,7 @@ header {
 .socials {
   @include flex-align-center;
 }
-.socials--top {
+.socials--header {
   // margin-left: 2.31em;
   margin-top: 1px;
 }
@@ -65,11 +65,19 @@ header {
   }
 }
 
-.socials__icon-box--top {
+.socials__icon-box--header {
   height: 1.375em;
   width: 1.375em;
   i {
     font-size: 0.6em;
+  }
+}
+
+.socials__icon-box--footer {
+  height: 2.31em;
+  width: 2.31em;
+  i {
+    font-size: 0.93em;
   }
 }
 

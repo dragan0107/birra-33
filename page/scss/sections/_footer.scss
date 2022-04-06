@@ -1,0 +1,56 @@
+#footer {
+  background: url('/page/images/footer.jpg');
+  h3 {
+    font-family: $alegreya;
+    font-size: 1.31em;
+    color: $nav-brown-yellow;
+    margin-top: 1.31em;
+    margin-bottom: 2.4em;
+  }
+  ul {
+    list-style: none;
+  }
+  li,
+  p {
+    @include fira-sans($fw: 400);
+    color: $shop-bgd;
+    font-size: 0.875em;
+  }
+}
+
+.footer-wrapper {
+}
+
+.footer-box {
+  padding: 7.4em 0 4em;
+  width: 60%;
+}
+
+.footer-link-list {
+  padding-left: 1em;
+}
+
+.blog-list {
+  padding: 0;
+  &__item {
+    margin-bottom: 1.8em;
+  }
+}
+
+.footer__item {
+  &--logo-icons {
+    img {
+      margin-bottom: 1.31em;
+    }
+    p {
+      margin-bottom: 2.6em;
+    }
+  }
+  &--contacts {
+    span {
+      @include fira-sans($fw: 700);
+      font-size: 1em;
+      color: $nav-brown-yellow;
+    }
+  }
+}

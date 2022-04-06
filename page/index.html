@@ -32,24 +32,24 @@
               <i class="fa-solid fa-cart-shopping"></i>
               <span>YOUR CART: 0 items</span>
             </div>
-            <div class="socials socials--top">
+            <div class="socials socials--header">
               <div
-                class="socials__icon-box socials__icon-box--top rounded-circle"
+                class="socials__icon-box socials__icon-box--header rounded-circle"
               >
                 <i class="fa-brands fa-twitter"></i>
               </div>
               <div
-                class="socials__icon-box socials__icon-box--top rounded-circle"
+                class="socials__icon-box socials__icon-box--header rounded-circle"
               >
                 <i class="fa-brands fa-facebook-f"></i>
               </div>
               <div
-                class="socials__icon-box socials__icon-box--top rounded-circle"
+                class="socials__icon-box socials__icon-box--header rounded-circle"
               >
                 <i class="fa-brands fa-google-plus-g"></i>
               </div>
               <div
-                class="socials__icon-box socials__icon-box--top rounded-circle"
+                class="socials__icon-box socials__icon-box--header rounded-circle"
               >
                 <i class="fa-solid fa-rss"></i>
               </div>
@@ -182,7 +182,7 @@
               </option>
             </select>
             <div class="beer-container container">
-              <div class="row">
+              <div class="row beer-row">
                 <div class="col col-md-4 col-sm-12">
                   <div class="beer-container__item">
                     <div class="beer-container__image">
@@ -217,7 +217,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row beer-row">
                 <div class="col col-md-4 col-sm-12">
                   <div class="beer-container__item">
                     <div class="beer-container__image">
@@ -252,7 +252,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row beer-row">
                 <div class="col col-md-4 col-sm-12">
                   <div class="beer-container__item">
                     <div class="beer-container__image">
@@ -287,7 +287,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row beer-row">
                 <div class="col-12 d-flex justify-content-center">
                   <ul class="pagination">
                     <li class="page-item pagination--next-prev">
@@ -334,62 +334,82 @@
       </div>
     </section>
     <section id="footer">
-      <footer class="footer-box">
-        <div class="footer__item">
-          <img src="/page/images/logo2.png" alt="" />
-          <p>
-            We are the first modern day brewery. Our success has been built
-            through the development of quality beers.
-          </p>
-          <div class="socials">
-            <div
-              class="socials__icon-box socials__icon-box--top rounded-circle"
-            >
-              <i class="fa-brands fa-twitter"></i>
+      <div
+        class="footer-wrapper d-flex flex-column justify-content-center align-items-center"
+      >
+        <footer class="footer-box d-flex justify-content-center">
+          <div class="row">
+            <div class="col">
+              <div class="footer__item footer__item--logo-icons">
+                <img src="/page/images/logo2.png" alt="" />
+                <p>
+                  We are the first modern day brewery. Our success has been
+                  built through the development of quality beers.
+                </p>
+                <div class="socials socials--footer">
+                  <div
+                    class="socials__icon-box socials__icon-box--footer rounded-circle"
+                  >
+                    <i class="fa-brands fa-twitter"></i>
+                  </div>
+                  <div
+                    class="socials__icon-box socials__icon-box--footer rounded-circle"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+                  <div
+                    class="socials__icon-box socials__icon-box--footer rounded-circle"
+                  >
+                    <i class="fa-brands fa-google-plus-g"></i>
+                  </div>
+                  <div
+                    class="socials__icon-box socials__icon-box--footer rounded-circle"
+                  >
+                    <i class="fa-solid fa-rss"></i>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div
-              class="socials__icon-box socials__icon-box--top rounded-circle"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
+            <div class="col">
+              <div class="footer__item">
+                <h3>LINKS</h3>
+                <ul class="footer-link-list">
+                  <li class="footer-link-list__item">HOME</li>
+                  <li class="footer-link-list__item">BREWERY</li>
+                  <li class="footer-link-list__item">RESERVATION</li>
+                  <li class="footer-link-list__item">ABOUT</li>
+                  <li class="footer-link-list__item">BLOG</li>
+                  <li class="footer-link-list__item">CONTACTS</li>
+                </ul>
+              </div>
             </div>
-            <div
-              class="socials__icon-box socials__icon-box--top rounded-circle"
-            >
-              <i class="fa-brands fa-google-plus-g"></i>
+            <div class="col">
+              <div class="footer__item">
+                <h3>BLOG</h3>
+                <ul class="blog-list">
+                  <li class="blog-list__item">
+                    Our spaces are welcoming and infinitely tailorable
+                  </li>
+                  <li class="blog-list__item">
+                    Whatever you might need to make your event sparkle
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div
-              class="socials__icon-box socials__icon-box--top rounded-circle"
-            >
-              <i class="fa-solid fa-rss"></i>
+            <div class="col">
+              <div class="footer__item footer__item--contacts">
+                <h3>CONTACTS</h3>
+                <p><span>Address: </span>1229 SE Nehalem, Portland, OR 97202</p>
+                <p><span>Phone: </span>503 230 9260</p>
+                <p><span>Email: </span>info@brewery.com</p>
+              </div>
             </div>
           </div>
+        </footer>
+        <div class="copyright">
+          <a href="">AncoraThemes</a>© 2022. All rights reserved.
+          <a href="">Terms of Use</a>and <a href="">Privacy Policy</a>
         </div>
-        <div class="footer__item">
-          <h3>LINKS</h3>
-          <ul>
-            <li>HOME</li>
-            <li>BREWERY</li>
-            <li>RESERVATION</li>
-            <li>ABOUT</li>
-            <li>BLOG</li>
-            <li>CONTACTS</li>
-          </ul>
-        </div>
-        <div class="footer__item">
-          <h3>BLOG</h3>
-          <span>Our spaces are welcoming and infinitely tailorable</span>
-          <span>Whatever you might need to make your event sparkle</span>
-        </div>
-        <div class="footer__item">
-          <h3>CONTACTS</h3>
-          <p><span>Address</span>1229 SE Nehalem, Portland, OR 97202</p>
-          <p><span>Phone</span>503 230 9260</p>
-          <p><span>Email</span>info@brewery.com</p>
-        </div>
-      </footer>
-      <div class="copyright">
-        <a href="">AncoraThemes</a>© 2022. All rights reserved.
-        <a href="">Terms of Use</a>and <a href="">Privacy Policy</a>
       </div>
     </section>
     <script
