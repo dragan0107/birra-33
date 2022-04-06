@@ -1,0 +1,43 @@
+.pagination,
+.page-item {
+}
+
+.page-item {
+}
+.page-link {
+  border: 0px;
+  background: none;
+  color: $orange-brown;
+  font-family: $alegreya;
+  font-size: 1.325em;
+  border-radius: 0;
+
+  &:hover {
+    background: $orange-brown;
+    color: $shop-bgd;
+  }
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.pagination--next-prev {
+  &:hover {
+    background: none;
+    color: $hover-brown;
+  }
+}
+.pagination--next-prev .active {
+  background: none;
+}
+
+.arrow-pagination {
+  font-size: 0.6em;
+}
