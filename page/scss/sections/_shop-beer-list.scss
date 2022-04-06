@@ -1,30 +1,30 @@
 .shop-beer-list {
-  width: 80%;
+  width: 75%;
   position: relative;
-}
-.shop-beer-list__display-icons {
-  position: absolute;
-  left: 0;
-  top: -0.5em;
-  width: 18em;
-  @include flex-align-center;
-  margin-bottom: 1em;
-  i {
-    font-size: 1.82em;
-    color: $orange-brown;
-    margin-right: 0.3em;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  &__display-icons {
+    position: absolute;
+    left: 0;
+    top: -0.5em;
+    width: 18em;
+    @include flex-align-center;
+    margin-bottom: 1em;
+    i {
+      font-size: 1.82em;
+      color: $orange-brown;
+      margin-right: 0.3em;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
 
-    &:hover {
-      color: #793319;
+      &:hover {
+        color: #793319;
+      }
     }
-  }
-  span {
-    @include fira-sans($fw: 500);
-    font-size: 0.85em;
-    color: $nav-dark-brown;
-    margin-left: 0.6em;
+    span {
+      @include fira-sans($fw: 500);
+      font-size: 0.85em;
+      color: $nav-dark-brown;
+      margin-left: 0.6em;
+    }
   }
 }
 .shop-beer-list-selector,
@@ -51,16 +51,42 @@
     border: 1px solid $orange-brown;
   }
 }
-.shop-beer-list-selector__option {
+
+.beer-container {
+  margin-top: 6.68em;
+  &--btn {
+    //   width: 13em;
+    width: 100%;
+    height: 4.2em;
+    background: $button-brown;
+    padding: 0.9em 0;
+    line-height: 1.85em;
+
+    &:hover {
+      background: $orange-brown;
+    }
+  }
+  &__item {
+    //   @include flex-justify-center($direction: column);
+    @include flex-center-all($direction: column);
+    height: 100%;
+    background: $light-brown;
+  }
+
+  &__image {
+    height: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__price {
+    @include fira-sans($fw: 500);
+    font-size: 0.875em;
+    color: $orange-brown;
+    margin-bottom: 1.31em;
+  }
 }
 
-.beer-container--btn {
-  width: 13em;
-  height: 3.75em;
-  background: $button-brown;
-  padding: 0.9em 0;
-
-  &:hover {
-    background: $orange-brown;
-  }
+.row {
+  margin-bottom: 1.81em;
 }

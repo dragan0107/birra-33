@@ -250,9 +250,6 @@ header {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.shopbtn span {
-  font-size: 1.06em;
-}
 
 .shop-content__goldbeer-wrapper {
   background: url("/page/images/jumbo.jpg");
@@ -282,12 +279,14 @@ header {
   font-size: 1.375em;
   line-height: 1.3em;
 }
-
 .shop-content__goldbeer--btn {
   width: 17.56em;
   height: 3.68em;
   margin-top: 2.4em;
   background: #bf431f;
+}
+.shop-content__goldbeer--btn span {
+  font-size: 1.06em;
 }
 .shop-content__goldbeer--btn:hover {
   background: #7a3319;
@@ -365,10 +364,9 @@ header {
 }
 
 .shop-beer-list {
-  width: 80%;
+  width: 75%;
   position: relative;
 }
-
 .shop-beer-list__display-icons {
   position: absolute;
   left: 0;
@@ -423,20 +421,50 @@ header {
   border: 1px solid #bf431f;
 }
 
+.beer-container {
+  margin-top: 6.68em;
+}
 .beer-container--btn {
-  width: 13em;
-  height: 3.75em;
+  width: 100%;
+  height: 4.2em;
   background: #d57f2c;
   padding: 0.9em 0;
+  line-height: 1.85em;
 }
 .beer-container--btn:hover {
   background: #bf431f;
+}
+.beer-container__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: #e3cfab;
+}
+.beer-container__image {
+  height: 100%;
+}
+.beer-container__image img {
+  width: 100%;
+}
+.beer-container__price {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #bf431f;
+  margin-bottom: 1.31em;
+}
+
+.row {
+  margin-bottom: 1.81em;
 }
 
 .shop-content-shop {
   display: flex;
   align-items: center;
   flex-direction: row;
+  align-items: flex-start;
   margin-top: 7.875em;
   width: 100%;
   gap: 2em;
