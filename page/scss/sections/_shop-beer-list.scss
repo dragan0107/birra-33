@@ -1,0 +1,66 @@
+.shop-beer-list {
+  width: 80%;
+  position: relative;
+}
+.shop-beer-list__display-icons {
+  position: absolute;
+  left: 0;
+  top: -0.5em;
+  width: 18em;
+  @include flex-align-center;
+  margin-bottom: 1em;
+  i {
+    font-size: 1.82em;
+    color: $orange-brown;
+    margin-right: 0.3em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #793319;
+    }
+  }
+  span {
+    @include fira-sans($fw: 500);
+    font-size: 0.85em;
+    color: $nav-dark-brown;
+    margin-left: 0.6em;
+  }
+}
+.shop-beer-list-selector,
+.shop-beer-list-selector__option {
+  background-color: $shop-bgd;
+}
+.shop-beer-list-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 2em 0.5em 1em;
+  @include fira-sans($fw: 400);
+  color: $nav-dark-brown;
+  font-size: 14px;
+  width: 14em;
+  height: 4em;
+  border: 1px solid $light-brown;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $nav-brown-yellow;
+  }
+  &:focus {
+    border: 1px solid $orange-brown;
+  }
+}
+.shop-beer-list-selector__option {
+}
+
+.beer-container--btn {
+  width: 13em;
+  height: 3.75em;
+  background: $button-brown;
+  padding: 0.9em 0;
+
+  &:hover {
+    background: $orange-brown;
+  }
+}

@@ -248,6 +248,7 @@ header {
   font-family: "Alegreya", serif;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .shopbtn span {
   font-size: 1.06em;
@@ -287,7 +288,6 @@ header {
   height: 3.68em;
   margin-top: 2.4em;
   background: #bf431f;
-  transition: all 0.3s ease-in-out;
 }
 .shop-content__goldbeer--btn:hover {
   background: #7a3319;
@@ -364,10 +364,80 @@ header {
   margin-right: 0.6em;
 }
 
+.shop-beer-list {
+  width: 80%;
+  position: relative;
+}
+
+.shop-beer-list__display-icons {
+  position: absolute;
+  left: 0;
+  top: -0.5em;
+  width: 18em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+.shop-beer-list__display-icons i {
+  font-size: 1.82em;
+  color: #bf431f;
+  margin-right: 0.3em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.shop-beer-list__display-icons i:hover {
+  color: #793319;
+}
+.shop-beer-list__display-icons span {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.85em;
+  color: #44322c;
+  margin-left: 0.6em;
+}
+
+.shop-beer-list-selector,
+.shop-beer-list-selector__option {
+  background-color: #f4e8ce;
+}
+
+.shop-beer-list-selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 2em 0.5em 1em;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: #44322c;
+  font-size: 14px;
+  width: 14em;
+  height: 4em;
+  border: 1px solid #e3cfab;
+  transition: all 0.3s ease-in-out;
+}
+.shop-beer-list-selector:hover {
+  border-color: #e1a03a;
+}
+.shop-beer-list-selector:focus {
+  border: 1px solid #bf431f;
+}
+
+.beer-container--btn {
+  width: 13em;
+  height: 3.75em;
+  background: #d57f2c;
+  padding: 0.9em 0;
+}
+.beer-container--btn:hover {
+  background: #bf431f;
+}
+
 .shop-content-shop {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  align-items: flex-start;
   margin-top: 7.875em;
+  width: 100%;
+  gap: 2em;
 }

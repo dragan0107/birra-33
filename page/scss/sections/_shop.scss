@@ -2,7 +2,9 @@
 @import './sections/shop-beer-list';
 
 .shop-content-shop {
-  @include flex-justify-center;
-  align-items: flex-start;
+  @include flex-align-center;
+  // align-items: flex-start;
   margin-top: 7.875em;
+  width: 100%;
+  gap: 2em;
 }
