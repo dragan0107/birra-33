@@ -183,14 +183,14 @@
             </select>
             <div class="beer-container container">
               <div class="row beer-row">
-                <div
-                  class="col col-md-4 col-sm-12"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
+                <div class="col col-md-4 col-sm-12">
                   <div class="beer-container__item">
                     <div class="beer-container__image">
-                      <i class="bi bi-link-45deg"></i>
+                      <i
+                        class="bi bi-link-45deg"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      ></i>
 
                       <img src="./images/beer.png" alt="" />
                     </div>
@@ -428,14 +428,6 @@
         ><i class="fa-solid fa-angle-up"></i
       ></a>
     </div>
-    <!-- <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Launch demo modal
-    </button> -->
 
     <div
       class="modal fade"
@@ -444,31 +436,40 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content beer-desc">
+          <div class="modal-header beer-desc__header">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5>AB:07</h5>
+              <span>Whisky Cask-Aged Scotch Ale.</span>
+            </div>
           </div>
-          <div class="modal-body">
-            <h1>Drip drip</h1>
-            <hr />
-            <p>Waddup faqqots</p>
+          <div class="modal-body beer-desc__body">
+            <p><span>With us since: </span>03/2010</p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+              temporibus dicta quibusdam fugit voluptas eos. Nemo impedit rerum
+              nostrum veniam!
+            </p>
+            <span class="beer-desc__body__bottomspan">It goes great with:</span>
+            <p>Kedgeree, Scotch broth with sourdough bread, clootie dumpling</p>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
+          <div
+            class="modal-footer beer-desc__footer d-flex justify-content-center align-items-center flex-row flex-nowrap"
+          >
+            <div
+              class="beer-abv d-flex justify-content-center align-items-center flex-column"
             >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+              <span class="beer-abv__title">Abv: </span>
+              <span>12.5</span>
+            </div>
+            <div>
+              <p class="footer-desc">
+                <span>And our tip: </span>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aspernatur id odit tempore quos architecto
+                mollitia ab. Voluptate commodi eveniet et.
+              </p>
+            </div>
           </div>
         </div>
       </div>

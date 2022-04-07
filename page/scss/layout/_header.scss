@@ -108,6 +108,8 @@ header {
   @include fira-sans($fw: 500);
   color: #f4e8ce;
   cursor: pointer;
+  transition: $smooth;
+
   &:hover {
     background: $hover-brown;
     color: $nav-brown-yellow;
@@ -183,12 +185,14 @@ header {
   @include flex-align-center;
   justify-content: space-between;
   height: 4.43em;
+
   .breadcrumbs__shop {
     font-family: $alegreya;
     font-size: 1.5em;
     color: $button-brown;
   }
   .breadcrumbs__currentpage {
+    transition: $smooth;
     @include fira-sans($fw: 500);
     color: $nav-dark-brown;
     cursor: pointer;

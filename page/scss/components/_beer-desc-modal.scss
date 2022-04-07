@@ -1,0 +1,48 @@
+.modal-content {
+  background: $light-brown;
+  @include fira-sans($fw: 400);
+}
+
+.beer-desc {
+  &__header {
+    div {
+      width: 100%;
+      color: $orange-brown;
+
+      h5 {
+        font-family: $alegreya;
+        font-weight: 600;
+        font-size: 1.6em;
+      }
+      span {
+        font-style: italic;
+      }
+    }
+  }
+
+  &__body {
+    span {
+      color: $orange-brown;
+    }
+
+    &__bottomspan {
+      margin-bottom: 2em;
+      line-height: 4em;
+    }
+  }
+  &__footer {
+    .beer-abv {
+      margin-bottom: 1.4em;
+      margin-right: 2.4em;
+    }
+    .beer-abv__title {
+      color: $orange-brown;
+    }
+
+    .footer-desc {
+      span {
+        color: $orange-brown;
+      }
+    }
+  }
+}
