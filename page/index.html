@@ -189,15 +189,106 @@
                       <i
                         class="bi bi-link-45deg"
                         data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
+                        data-bs-target="#beer-desc-modal"
                       ></i>
-
+                      <div
+                        class="modal fade"
+                        id="beer-desc-modal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div
+                          class="modal-dialog modal-dialog-centered modal-lg"
+                        >
+                          <div class="modal-content beer-desc">
+                            <div class="modal-header beer-desc__header">
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <h5>AB:07</h5>
+                                <span>Whisky Cask-Aged Scotch Ale.</span>
+                              </div>
+                            </div>
+                            <div class="modal-body beer-desc__body">
+                              <p><span>With us since: </span>03/2010</p>
+                              <p>
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Earum temporibus dicta
+                                quibusdam fugit voluptas eos. Nemo impedit rerum
+                                nostrum veniam!
+                              </p>
+                              <span class="beer-desc__body__bottomspan"
+                                >It goes great with:</span
+                              >
+                              <p>
+                                Kedgeree, Scotch broth with sourdough bread,
+                                clootie dumpling
+                              </p>
+                            </div>
+                            <div
+                              class="modal-footer beer-desc__footer d-flex justify-content-center align-items-center flex-row flex-nowrap"
+                            >
+                              <div
+                                class="beer-abv d-flex justify-content-center align-items-center flex-column"
+                              >
+                                <span class="beer-abv__title">Abv: </span>
+                                <span>12.5</span>
+                              </div>
+                              <div>
+                                <p class="footer-desc">
+                                  <span>And our tip: </span>Lorem ipsum dolor
+                                  sit amet consectetur adipisicing elit.
+                                  Aspernatur id odit tempore quos architecto
+                                  mollitia ab. Voluptate commodi eveniet et.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <img src="./images/beer.png" alt="" />
                     </div>
                     <span class="beer-container__price">$180.05</span>
-                    <button class="shopbtn beer-container--btn">
+                    <button
+                      class="shopbtn beer-container--btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#buy-a-beer"
+                    >
                       ADD TO CART
                     </button>
+                    <div
+                      class="modal fade"
+                      id="buy-a-beer"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div
+                          class="modal-content beer-addtocart d-flex justify-content-center align-items-center text-center"
+                        >
+                          <div class="modal-header beer-addtocart__header">
+                            <span class="beer-addtocart__header__title"
+                              >My cart</span
+                            >
+                          </div>
+                          <div class="modal-body beer-addtocart__body">
+                            <span
+                              class="orange-span beer-addtocart__body__title"
+                              >AB:07</span
+                            >
+                            <div class="beer-quantity">
+                              <span class="orange-span">Quantity: </span>
+                              <input type="text" />
+                            </div>
+                            <button class="shopbtn beer-addtocart__btn">
+                              Buy!
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="col col-md-4 col-sm-12">
@@ -427,52 +518,6 @@
       <a class="d-flex justify-content-center align-items-center" href="#"
         ><i class="fa-solid fa-angle-up"></i
       ></a>
-    </div>
-
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content beer-desc">
-          <div class="modal-header beer-desc__header">
-            <div class="d-flex justify-content-between align-items-center">
-              <h5>AB:07</h5>
-              <span>Whisky Cask-Aged Scotch Ale.</span>
-            </div>
-          </div>
-          <div class="modal-body beer-desc__body">
-            <p><span>With us since: </span>03/2010</p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-              temporibus dicta quibusdam fugit voluptas eos. Nemo impedit rerum
-              nostrum veniam!
-            </p>
-            <span class="beer-desc__body__bottomspan">It goes great with:</span>
-            <p>Kedgeree, Scotch broth with sourdough bread, clootie dumpling</p>
-          </div>
-          <div
-            class="modal-footer beer-desc__footer d-flex justify-content-center align-items-center flex-row flex-nowrap"
-          >
-            <div
-              class="beer-abv d-flex justify-content-center align-items-center flex-column"
-            >
-              <span class="beer-abv__title">Abv: </span>
-              <span>12.5</span>
-            </div>
-            <div>
-              <p class="footer-desc">
-                <span>And our tip: </span>Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Aspernatur id odit tempore quos architecto
-                mollitia ab. Voluptate commodi eveniet et.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

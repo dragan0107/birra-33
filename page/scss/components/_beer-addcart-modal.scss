@@ -1,0 +1,44 @@
+.beer-addtocart {
+  span,
+  input {
+    @include fira-sans($fw: 400);
+  }
+
+  &__header {
+    width: 100%;
+    @include flex-center-all;
+  }
+  .beer-addtocart__body__title,
+  .beer-addtocart__header__title {
+    font-size: 1.6em;
+  }
+
+  &__body {
+    @include flex-center-all($direction: column);
+  }
+
+  &__btn {
+    background: $button-brown;
+    width: 3em;
+    height: 2em;
+    font-size: 1.6em;
+    margin-top: 0.6em;
+  }
+}
+.beer-quantity {
+  span {
+    font-size: 1.2em;
+  }
+  input {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    width: 4.5em;
+    margin-left: 0.5em;
+    margin-top: 1.1em;
+  }
+}
+.orange-span {
+  color: $orange-brown;
+}

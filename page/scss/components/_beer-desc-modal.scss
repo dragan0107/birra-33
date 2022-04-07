@@ -1,9 +1,9 @@
 .modal-content {
   background: $light-brown;
-  @include fira-sans($fw: 400);
 }
 
 .beer-desc {
+  @include fira-sans($fw: 400);
   &__header {
     div {
       width: 100%;
