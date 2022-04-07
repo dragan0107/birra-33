@@ -16,14 +16,22 @@
     color: $shop-bgd;
     font-size: 0.875em;
   }
+  li {
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      color: $nav-brown-yellow;
+      cursor: pointer;
+    }
+  }
 }
-
 .footer-wrapper {
+  margin-top: 1em;
 }
 
 .footer-box {
-  padding: 7.4em 0 4em;
-  width: 60%;
+  padding: 7.4em 0.5em 4em;
+  width: 62%;
+  margin-bottom: 2.1em;
 }
 
 .footer-link-list {
@@ -43,7 +51,7 @@
       margin-bottom: 1.31em;
     }
     p {
-      margin-bottom: 2.6em;
+      margin-bottom: 3.6em;
     }
   }
   &--contacts {
@@ -52,5 +60,20 @@
       font-size: 1em;
       color: $nav-brown-yellow;
     }
+  }
+}
+
+.copyright-wrapper {
+  width: 62%;
+}
+.copyright {
+  @include fira-sans($fw: 400);
+  color: #ae9d8b;
+  font-size: 0.875em;
+  padding: 2.5em 0 9em;
+
+  a {
+    color: $shop-bgd;
+    text-decoration: none;
   }
 }

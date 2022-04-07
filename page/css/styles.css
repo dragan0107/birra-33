@@ -537,10 +537,20 @@ header {
   color: #f4e8ce;
   font-size: 0.875em;
 }
+#footer li:hover {
+  transition: all 0.3s ease-in-out;
+  color: #e1a03a;
+  cursor: pointer;
+}
+
+.footer-wrapper {
+  margin-top: 1em;
+}
 
 .footer-box {
-  padding: 7.4em 0 4em;
-  width: 60%;
+  padding: 7.4em 0.5em 4em;
+  width: 62%;
+  margin-bottom: 2.1em;
 }
 
 .footer-link-list {
@@ -558,11 +568,27 @@ header {
   margin-bottom: 1.31em;
 }
 .footer__item--logo-icons p {
-  margin-bottom: 2.6em;
+  margin-bottom: 3.6em;
 }
 .footer__item--contacts span {
   font-family: "Fira Sans", sans-serif;
   font-weight: 700;
   font-size: 1em;
   color: #e1a03a;
+}
+
+.copyright-wrapper {
+  width: 62%;
+}
+
+.copyright {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: #ae9d8b;
+  font-size: 0.875em;
+  padding: 2.5em 0 9em;
+}
+.copyright a {
+  color: #f4e8ce;
+  text-decoration: none;
 }
