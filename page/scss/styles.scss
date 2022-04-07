@@ -9,8 +9,11 @@
 @import './components/scroll-top';
 
 // Sections
-@import './sections/header';
 @import './sections/shop-wrapper';
 @import './sections/gold-beer';
 @import './sections/shop';
-@import './sections/footer';
+
+// Layout
+
+@import './layout/footer';
+@import './layout/header';

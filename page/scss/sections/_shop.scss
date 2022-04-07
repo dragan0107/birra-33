@@ -1,5 +1,5 @@
-@import './sections/shop-sidebar';
-@import './sections/shop-beer-list';
+@import './components/shop-sidebar';
+@import './components/shop-beer-list';
 
 .shop-content-shop {
   @include flex-align-center;

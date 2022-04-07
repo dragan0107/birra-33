@@ -1,16 +1,17 @@
 .scroll-top {
   position: fixed;
-  bottom: -5.8em;
+  bottom: -4em;
   right: 1.75em;
   height: 2.625em;
   width: 2.625em;
   opacity: 0;
   background: $orange-brown;
   cursor: pointer;
-  transition: $smooth;
+  transition: all 1s ease-in-out;
   a {
     width: 100%;
     height: 100%;
+    text-decoration: none;
   }
   &:hover {
     background: $hover-brown;

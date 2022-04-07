@@ -73,10 +73,27 @@
     @include flex-center-all($direction: column);
     height: 100%;
     background: $light-brown;
+    transition: $smooth;
+    cursor: pointer;
+    &:hover {
+      background: none;
+    }
   }
 
   &__image {
     height: 100%;
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.3em;
+      color: white;
+      filter: drop-shadow(-4px 4px 2px #525151);
+    }
+
     img {
       width: 100%;
     }
