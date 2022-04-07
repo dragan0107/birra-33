@@ -43,7 +43,7 @@
     font-size: 0.875em;
     color: $nav-dark-brown;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: $smooth;
     &:hover {
       color: $nav-brown-yellow;
     }

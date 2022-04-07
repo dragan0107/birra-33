@@ -5,6 +5,29 @@
   padding: 0;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: -5.8em;
+  right: 1.75em;
+  height: 2.625em;
+  width: 2.625em;
+  opacity: 0;
+  background: #bf431f;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.scroll-top a {
+  width: 100%;
+  height: 100%;
+}
+.scroll-top:hover {
+  background: #83351a;
+}
+.scroll-top i {
+  font-size: 0.6em;
+  color: #f4e8ce;
+}
+
 header {
   width: 100%;
 }
@@ -75,7 +98,7 @@ header {
   flex-direction: row;
   background: #30211b;
   margin-right: 3.5px;
-  transition: 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   color: #e1a03a;
 }
@@ -356,7 +379,7 @@ header {
   font-size: 0.875em;
   color: #44322c;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .shop-categories__list-item a:hover {
   color: #e1a03a;
@@ -543,13 +566,10 @@ header {
   cursor: pointer;
 }
 
-.footer-wrapper {
-  margin-top: 1em;
-}
-
 .footer-box {
-  padding: 7.4em 0.5em 4em;
+  padding: 5.2em 0.5em 4em;
   width: 62%;
+  margin-top: 1em;
   margin-bottom: 2.1em;
 }
 

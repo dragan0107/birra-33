@@ -15,7 +15,7 @@
       color: $orange-brown;
       margin-right: 0.3em;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: $smooth;
 
       &:hover {
         color: #793319;
@@ -44,7 +44,7 @@
   width: 14em;
   height: 4em;
   border: 1px solid $light-brown;
-  transition: all 0.3s ease-in-out;
+  transition: $smooth;
 
   &:hover {
     border-color: $nav-brown-yellow;

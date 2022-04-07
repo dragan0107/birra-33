@@ -5,6 +5,9 @@
 @import './base/base';
 @import './base/mixins';
 
+// Components
+@import './components/scroll-top';
+
 // Sections
 @import './sections/header';
 @import './sections/shop-wrapper';
