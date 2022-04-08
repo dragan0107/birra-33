@@ -354,6 +354,7 @@
 
 .beer-container {
   margin-top: 6.68em;
+  gap: 2em;
 }
 .beer-container--btn {
   width: 100%;
@@ -372,7 +373,6 @@
   flex-direction: column;
   height: 100%;
   width: 29%;
-  margin: 0 2em 2em 0;
   background: #e3cfab;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
@@ -597,6 +597,13 @@ header {
 .navibar-wrapper {
   background: #bf431f;
   height: 5.125em;
+  width: 100%;
+}
+
+.navibar-sticky {
+  position: fixed;
+  z-index: 2;
+  top: 0;
 }
 
 .navibar {
@@ -664,10 +671,12 @@ header {
 .features-links--menu1,
 .features-links--menu2 {
   position: absolute;
+  visibility: hidden;
 }
 
 .features-links--menu1 {
   top: 230%;
+  opacity: 0;
 }
 
 .features-links--menu2 {
@@ -677,9 +686,10 @@ header {
 }
 
 .features-menu:hover .features-links--menu1 {
-  z-index: 1;
+  z-index: 11;
   opacity: 1;
   top: 100%;
+  visibility: visible;
 }
 
 .pages-wrapper {
@@ -696,6 +706,7 @@ header {
   opacity: 1;
   z-index: 1;
   top: 80%;
+  visibility: visible;
 }
 
 .breadcrumbs-wrapper {

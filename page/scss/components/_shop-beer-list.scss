@@ -56,6 +56,7 @@
 
 .beer-container {
   margin-top: 6.68em;
+  gap: 2em;
   &--btn {
     //   width: 13em;
     width: 100%;
@@ -73,7 +74,7 @@
     @include flex-center-all($direction: column);
     height: 100%;
     width: 29%;
-    margin: 0 2em 2em 0;
+    // margin: 0 2em 2em 0;
     background: $light-brown;
     transition: $smooth;
     cursor: pointer;
