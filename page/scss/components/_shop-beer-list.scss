@@ -42,7 +42,7 @@
   color: $nav-dark-brown;
   font-size: 14px;
   width: 14em;
-  height: 4em;
+  height: 3.6em;
   border: 1px solid $light-brown;
   transition: $smooth;
 
@@ -60,10 +60,11 @@
   &--btn {
     //   width: 13em;
     width: 100%;
-    height: 4.2em;
+    height: 3.68em;
     background: $button-brown;
     padding: 0.9em 0;
     line-height: 1.85em;
+    font-size: 17px;
 
     &:hover {
       background: $orange-brown;
@@ -72,8 +73,8 @@
   &__item {
     //   @include flex-justify-center($direction: column);
     @include flex-center-all($direction: column);
-    height: 100%;
-    width: 29%;
+    height: 28.8em;
+    width: 30.8%;
     // margin: 0 2em 2em 0;
     background: $light-brown;
     transition: $smooth;
@@ -106,7 +107,9 @@
     }
 
     img {
+      height: 100%;
       width: 100%;
+      object-fit: cover;
     }
   }
   &__price {

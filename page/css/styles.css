@@ -120,7 +120,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 6.25em 0 6.05em;
+  padding: 5.54em 0 6.05em;
   background: #f4e8ce;
 }
 
@@ -129,7 +129,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 63%;
+  width: 61.5%;
 }
 
 .shopbtn {
@@ -156,14 +156,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2.31em 6.18em 1.06em;
+  padding: 2.5em 6.18em 1.06em;
   text-align: center;
 }
 .shop-content__goldbeer h1 {
   font-family: "Alegreya", serif;
   font-size: 4em;
   color: white;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.25em;
 }
 .shop-content__goldbeer p {
   font-family: "Fira Sans", sans-serif;
@@ -204,7 +204,7 @@
 
 .shop-cart,
 .shop-categories {
-  padding: 2em 2em 3em;
+  padding: 1.9em 1.8em 2em;
 }
 
 .shop-sidebar__title {
@@ -232,7 +232,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 0.72em;
+  margin-bottom: 0.68em;
 }
 .shop-categories__list-item a {
   font-family: "Fira Sans", sans-serif;
@@ -341,7 +341,7 @@
   color: #44322c;
   font-size: 14px;
   width: 14em;
-  height: 4em;
+  height: 3.6em;
   border: 1px solid #e3cfab;
   transition: all 0.25s ease-in-out;
 }
@@ -358,10 +358,11 @@
 }
 .beer-container--btn {
   width: 100%;
-  height: 4.2em;
+  height: 3.68em;
   background: #d57f2c;
   padding: 0.9em 0;
   line-height: 1.85em;
+  font-size: 17px;
 }
 .beer-container--btn:hover {
   background: #bf431f;
@@ -371,8 +372,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
-  width: 29%;
+  height: 28.8em;
+  width: 30.8%;
   background: #e3cfab;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
@@ -400,7 +401,9 @@
   opacity: 1;
 }
 .beer-container__image img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .beer-container__price {
   font-family: "Fira Sans", sans-serif;
@@ -513,12 +516,7 @@ header {
 .nav-info,
 .navibar,
 .breadcrumbs {
-  width: 62%;
-}
-
-.nav-info,
-.breadcrumbs {
-  padding-right: 1.22em;
+  width: 61.5%;
 }
 
 .nav-info-wrapper {
@@ -620,7 +618,6 @@ header {
   flex-direction: row;
   list-style: none;
   margin-bottom: 0;
-  margin-right: 1.2em;
 }
 
 .navibar__logo {

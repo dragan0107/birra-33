@@ -16,12 +16,12 @@ const observer = new IntersectionObserver(function (entries) {
 observer.observe(navibar);
 
 window.onscroll = function () {
-  addNaviClass();
+  toggleNavi();
 };
 
-var sticky = navibar.offsetTop;
+let sticky = navibar.offsetTop;
 
-function addNaviClass() {
+function toggleNavi() {
   if (window.pageYOffset > sticky) {
     navibar.classList.add('navibar-sticky');
   } else {

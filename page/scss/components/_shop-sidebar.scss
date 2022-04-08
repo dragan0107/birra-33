@@ -13,7 +13,7 @@
 }
 .shop-cart,
 .shop-categories {
-  padding: 2em 2em 3em;
+  padding: 1.9em 1.8em 2em;
 }
 
 .shop-sidebar__title {
@@ -37,7 +37,7 @@
 
 .shop-categories__list-item {
   @include flex-align-center;
-  margin-bottom: 0.72em;
+  margin-bottom: 0.68em;
   a {
     @include fira-sans($fw: 500);
     font-size: 0.875em;

@@ -7,14 +7,14 @@
 
 .shop-content__goldbeer {
   @include flex-center-all($direction: column);
-  padding: 2.31em 6.18em 1.06em;
+  padding: 2.5em 6.18em 1.06em;
   text-align: center;
 
   h1 {
     font-family: $alegreya;
     font-size: 4em;
     color: white;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.25em;
   }
   p {
     @include fira-sans($fw: 400);
