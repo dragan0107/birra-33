@@ -1,16 +1,23 @@
-.pagination,
-.page-item {
+.pagination {
+  margin-top: 2em;
 }
 
 .page-item {
 }
+
 .page-link {
   border: 0px;
   background: none;
   color: $orange-brown;
   font-family: $alegreya;
-  font-size: 1.325em;
+  font-size: 1.2em;
   border-radius: 0;
+  margin: 0.22em;
+  padding: 0.26em 0.7em;
+
+  i {
+    font-size: 0.7em;
+  }
 
   &:hover {
     background: $orange-brown;
@@ -34,10 +41,17 @@
     color: $hover-brown;
   }
 }
-.pagination--next-prev .active {
+.pagination--next-prev {
   background: none;
 }
 
 .arrow-pagination {
   font-size: 0.6em;
+}
+
+.page-link:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+  background: $orange-brown;
+  color: $shop-bgd;
 }

@@ -120,7 +120,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 5.54em 0 6.05em;
+  padding: 5.54em 0 3.5em;
   background: #f4e8ce;
 }
 
@@ -174,7 +174,7 @@
 }
 .shop-content__goldbeer--btn {
   width: 17.56em;
-  height: 3.68em;
+  height: 3.5em;
   margin-top: 2.4em;
   background: #bf431f;
 }
@@ -256,13 +256,22 @@
   margin-right: 0.6em;
 }
 
+.pagination {
+  margin-top: 2em;
+}
+
 .page-link {
   border: 0px;
   background: none;
   color: #bf431f;
   font-family: "Alegreya", serif;
-  font-size: 1.325em;
+  font-size: 1.2em;
   border-radius: 0;
+  margin: 0.22em;
+  padding: 0.26em 0.7em;
+}
+.page-link i {
+  font-size: 0.7em;
 }
 .page-link:hover {
   background: #bf431f;
@@ -286,12 +295,19 @@
   color: #83351a;
 }
 
-.pagination--next-prev .active {
+.pagination--next-prev {
   background: none;
 }
 
 .arrow-pagination {
   font-size: 0.6em;
+}
+
+.page-link:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+  background: #bf431f;
+  color: #f4e8ce;
 }
 
 .shop-beer-list {
@@ -434,8 +450,8 @@
   font-family: "Alegreya", serif;
   font-size: 1.31em;
   color: #e1a03a;
-  margin-top: 1.31em;
-  margin-bottom: 2.4em;
+  margin-top: 1.54em;
+  margin-bottom: 2.1em;
 }
 #footer ul {
   list-style: none;
@@ -454,8 +470,8 @@
 }
 
 .footer-box {
-  padding: 5.2em 0.5em 4em;
-  width: 62%;
+  padding: 4.4em 0.5em 4em;
+  width: 61.5%;
   margin-top: 1em;
   margin-bottom: 2.1em;
 }
@@ -472,10 +488,17 @@
 }
 
 .footer__item--logo-icons img {
-  margin-bottom: 1.31em;
+  margin-top: 1em;
+  margin-bottom: 1.8em;
 }
 .footer__item--logo-icons p {
-  margin-bottom: 3.6em;
+  margin-bottom: 3.7em;
+}
+.footer__item--blog {
+  margin-left: 0.2em;
+}
+.footer__item--contacts {
+  margin-left: 0.5em;
 }
 .footer__item--contacts span {
   font-family: "Fira Sans", sans-serif;
@@ -485,7 +508,7 @@
 }
 
 .copyright-wrapper {
-  width: 62%;
+  width: 61.5%;
 }
 
 .copyright {
@@ -603,13 +626,15 @@ header {
   z-index: 2;
   top: 0;
 }
+.navibar-sticky img {
+  width: 60%;
+}
 
 .navibar {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  display: flex;
 }
 .navibar .navibar__links {
   display: flex;
@@ -618,10 +643,6 @@ header {
   flex-direction: row;
   list-style: none;
   margin-bottom: 0;
-}
-
-.navibar__logo {
-  margin-left: 0.15em;
 }
 
 .navibar__link {
