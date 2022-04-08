@@ -129,7 +129,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 62%;
+  width: 63%;
 }
 
 .shopbtn {
@@ -371,6 +371,8 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  width: 29%;
+  margin: 0 2em 2em 0;
   background: #e3cfab;
   transition: all 0.25s ease-in-out;
   cursor: pointer;

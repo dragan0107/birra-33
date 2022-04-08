@@ -72,6 +72,8 @@
     //   @include flex-justify-center($direction: column);
     @include flex-center-all($direction: column);
     height: 100%;
+    width: 29%;
+    margin: 0 2em 2em 0;
     background: $light-brown;
     transition: $smooth;
     cursor: pointer;
