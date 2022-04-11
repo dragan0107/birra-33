@@ -72,7 +72,7 @@
               <li class="navibar__link">RESERVATION</li>
               <div class="features-menu features-menu--parent">
                 <li class="navibar__link navibar-link-features">FEATURES</li>
-                <ul class="features-links features-links--menu1 ">
+                <ul class="features-links features-links--menu1">
                   <li class="features__link">TEAM</li>
                   <li class="features__link">ABOUT</li>
                   <li class="features__link">ABOUT-2</li>
@@ -181,9 +181,10 @@
                 Show All
               </option>
             </select>
-            <div id="beer-output" class="beer-container d-flex flex-wrap justify-content-center">
-              
-            </div>
+            <div
+              id="beer-output"
+              class="beer-container d-flex flex-wrap justify-content-center"
+            ></div>
             <div class="col-12 d-flex justify-content-center">
               <ul class="pagination">
                 <li class="page-item pagination--next-prev">
@@ -193,9 +194,7 @@
                     aria-label="Previous"
                   >
                     <span aria-hidden="true"
-                      ><i
-                        class="arrow-pagination fa-solid fa-angle-left"
-                      ></i
+                      ><i class="arrow-pagination fa-solid fa-angle-left"></i
                     ></span>
                   </a>
                 </li>
@@ -215,14 +214,11 @@
                     aria-label="Next"
                   >
                     <span aria-hidden="true"
-                      ><i
-                        class="arrow-pagination fa-solid fa-angle-right"
-                      ></i
+                      ><i class="arrow-pagination fa-solid fa-angle-right"></i
                     ></span>
                   </a>
                 </li>
               </ul>
-            </div>
             </div>
           </div>
         </div>
@@ -317,19 +313,114 @@
         ><i class="fa-solid fa-angle-up"></i
       ></a>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js"></script>
-    <script src="/page/scripts/script.js"></script>
-    <script src="/page/partials/beer.precompiled.js"></script>
-    <script>
-      let template = Handlebars.templates.beer;
-      document.getElementById('beer-output').innerHTML = template({
-        beers: ['Carlsberg', 'Tuborg', 'Heineken','Becks','Budweiser','Corona','77','45','434'],
-      });
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script id="beer-test" type="text/x-handlebars-template">
+      {{#each beers}}
+        <div class='beer-container__item'>
+          <div class='beer-container__image'>
+            <i
+              class='bi bi-link-45deg'
+              data-bs-toggle='modal'
+              data-bs-target='#beer-{{this.id}}'
+            ></i>
+            <div
+              class='modal fade'
+              id='beer-{{this.id}}'
+              tabindex='-1'
+              aria-labelledby='exampleModalLabel'
+              aria-hidden='true'
+            >
+              <div class='modal-dialog modal-dialog-centered modal-lg'>
+                <div class='modal-content beer-desc'>
+                  <div class='modal-header beer-desc__header'>
+                    <div
+                      class='d-flex justify-content-between align-items-center'
+                    >
+                      <h5>{{this.name}}</h5>
+                      <span>{{this.tagline}}</span>
+                    </div>
+                  </div>
+                  <div class='modal-body beer-desc__body'>
+                    <p><span>With us since: </span>{{this.first_brewed}}</p>
+                    <p>{{this.description}}
+                    </p>
+                    <span class='beer-desc__body__bottomspan'>It goes great
+                      with:</span>
+                    <p>
+                      {{this.food_pairing}}
+                    </p>
+                  </div>
+                  <div
+                    class='modal-footer beer-desc__footer d-flex justify-content-center align-items-center flex-row flex-nowrap'
+                  >
+                    <div
+                      class='beer-abv d-flex justify-content-center align-items-center flex-column'
+                    >
+                      <span class='beer-abv__title'>Abv: </span>
+                      <span>{{this.abv}}</span>
+                    </div>
+                    <div>
+                      <p class='footer-desc'>
+                        <span>And our tip: </span>{{this.brewers_tips}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src={{this.image_url}} alt='' />
+          </div>
+          <span class='beer-container__price'>${{this.ibu}}</span>
+          <button
+            class='shopbtn beer-container--btn'
+            data-bs-toggle='modal'
+            data-bs-target='#buy-a-beer-{{this.id}}'
+          >
+            ADD TO CART
+          </button>
+          <div
+            class='modal fade'
+            id='buy-a-beer-{{this.id}}'
+            data-bs-keyboard='false'
+            tabindex='-1'
+            aria-hidden='true'
+          >
+            <div class='modal-dialog modal-dialog-centered'>
+              <div
+                class='modal-content beer-addtocart d-flex justify-content-center align-items-center text-center'
+              >
+                <div class='modal-header beer-addtocart__header'>
+                  <span class='beer-addtocart__header__title'>My cart</span>
+                </div>
+                <div class='modal-body beer-addtocart__body'>
+                  <span
+                    class='orange-span beer-addtocart__body__title'
+                  >{{this.name}}</span>
+                  <div class='beer-quantity'>
+                    <span class='orange-span'>Quantity: </span>
+                    <input type='text' />
+                  </div>
+                  <button class='shopbtn beer-addtocart__btn'>
+                    Buy!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
     </script>
+    <script src="/page/scripts/script.js"></script>
   </body>
 </html>

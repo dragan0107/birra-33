@@ -75,7 +75,8 @@
   left: 100%;
 }
 
-.features-menu:hover .features-links--menu1 {
+.features-menu:hover .features-links--menu1,
+.pages-submenu:hover .features-links--menu2 {
   z-index: 11;
   opacity: 1;
   top: 100%;
@@ -91,8 +92,5 @@
 }
 
 .pages-submenu:hover .features-links--menu2 {
-  opacity: 1;
-  z-index: 1;
   top: 80%;
-  visibility: visible;
 }

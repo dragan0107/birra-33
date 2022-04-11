@@ -4,7 +4,6 @@ const scrollBtn = document.querySelector('.scroll-top');
 
 const observer = new IntersectionObserver((entries) => {
   const entry = entries[0];
-  console.log(entry);
   if (entry.isIntersecting) {
     scrollBtn.style.bottom = '-4em';
     scrollBtn.style.opacity = '0';
@@ -29,3 +28,15 @@ function toggleNavi() {
     navibar.classList.remove('navibar-sticky');
   }
 }
+
+let source = document.getElementById('beer-test').innerHTML;
+let template = Handlebars.compile(source);
+
+fetch('https://api.punkapi.com/v2/beers?page=1&per_page=10')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    document.getElementById('beer-output').innerHTML = template({
+      beers: data,
+    });
+  });
