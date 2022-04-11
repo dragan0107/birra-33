@@ -1,7 +1,8 @@
 const navibar = document.querySelector('.navibar-wrapper');
+const breadcrumbs = document.querySelector('.breadcrumbs');
 const scrollBtn = document.querySelector('.scroll-top');
 
-const observer = new IntersectionObserver(function (entries) {
+const observer = new IntersectionObserver((entries) => {
   const entry = entries[0];
   console.log(entry);
   if (entry.isIntersecting) {
@@ -13,9 +14,9 @@ const observer = new IntersectionObserver(function (entries) {
   }
 });
 
-observer.observe(navibar);
+observer.observe(breadcrumbs);
 
-window.onscroll = function () {
+window.onscroll = () => {
   toggleNavi();
 };
 

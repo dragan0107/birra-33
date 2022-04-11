@@ -80,8 +80,7 @@
   align-items: center;
   flex-direction: row;
 }
-.beer-addtocart .beer-addtocart__body__title,
-.beer-addtocart .beer-addtocart__header__title {
+.beer-addtocart__body__title, .beer-addtocart__header__title {
   font-size: 1.6em;
 }
 .beer-addtocart__body {
@@ -97,6 +96,9 @@
   font-size: 1.6em;
   margin-top: 0.6em;
 }
+.beer-addtocart__btn:hover {
+  background: #bf431f;
+}
 
 .beer-quantity span {
   font-size: 1.2em;
@@ -109,6 +111,7 @@
   width: 4.5em;
   margin-left: 0.5em;
   margin-top: 1.1em;
+  font-size: 1.2em;
 }
 
 .orange-span {
