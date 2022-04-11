@@ -165,8 +165,11 @@
           <div class="shop-beer-list">
             <div class="shop-beer-list__display">
               <div class="shop-beer-list__display-icons">
-                <i class="fa-solid fa-grip"></i>
-                <i class="fa-solid fa-list"></i>
+                <i onclick="beerDisplay()" class="fa-solid fa-grip"></i>
+                <i
+                  onclick="beerDisplay('horizontal')"
+                  class="fa-solid fa-list"
+                ></i>
                 <span>Showing 1-9 of 10 results</span>
               </div>
             </div>
@@ -332,11 +335,11 @@
             <i
               class='bi bi-link-45deg'
               data-bs-toggle='modal'
-              data-bs-target='#beer-{{this.id}}'
+              data-bs-target='#beer-{{id}}'
             ></i>
             <div
               class='modal fade'
-              id='beer-{{this.id}}'
+              id='beer-{{id}}'
               tabindex='-1'
               aria-labelledby='exampleModalLabel'
               aria-hidden='true'
@@ -347,18 +350,18 @@
                     <div
                       class='d-flex justify-content-between align-items-center'
                     >
-                      <h5>{{this.name}}</h5>
-                      <span>{{this.tagline}}</span>
+                      <h5>{{name}}</h5>
+                      <span>{{tagline}}</span>
                     </div>
                   </div>
                   <div class='modal-body beer-desc__body'>
-                    <p><span>With us since: </span>{{this.first_brewed}}</p>
-                    <p>{{this.description}}
+                    <p><span>With us since: </span>{{first_brewed}}</p>
+                    <p>{{description}}
                     </p>
                     <span class='beer-desc__body__bottomspan'>It goes great
                       with:</span>
                     <p>
-                      {{this.food_pairing}}
+                      {{food_pairing}}
                     </p>
                   </div>
                   <div
@@ -379,19 +382,23 @@
                 </div>
               </div>
             </div>
-            <img src={{this.image_url}} alt='' />
+            <img src={{image_url}} alt='' />
           </div>
-          <span class='beer-container__price'>${{this.ibu}}</span>
-          <button
-            class='shopbtn beer-container--btn'
-            data-bs-toggle='modal'
-            data-bs-target='#buy-a-beer-{{this.id}}'
-          >
-            ADD TO CART
-          </button>
+          <div class='beer-container__information'>
+            <h1 class='beer-title-front'>{{name}}</h1>
+            <p class='beer-desc-front'>{{description}}</p>
+            <span class='beer-container__price'>${{ibu}}</span>
+            <button
+              class='shopbtn beer-container--btn'
+              data-bs-toggle='modal'
+              data-bs-target='#buy-a-beer-{{id}}'
+            >
+              ADD TO CART
+            </button>
+          </div>
           <div
             class='modal fade'
-            id='buy-a-beer-{{this.id}}'
+            id='buy-a-beer-{{id}}'
             data-bs-keyboard='false'
             tabindex='-1'
             aria-hidden='true'
@@ -406,7 +413,7 @@
                 <div class='modal-body beer-addtocart__body'>
                   <span
                     class='orange-span beer-addtocart__body__title'
-                  >{{this.name}}</span>
+                  >{{name}}</span>
                   <div class='beer-quantity'>
                     <span class='orange-span'>Quantity: </span>
                     <input type='text' />

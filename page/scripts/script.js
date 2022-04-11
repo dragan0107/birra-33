@@ -29,6 +29,24 @@ function toggleNavi() {
   }
 }
 
+// Beer display class manipulation
+
+function beerDisplay(property) {
+  let beerItems = document.getElementsByClassName('beer-container__item');
+
+  if (property === 'horizontal') {
+    for (let i = 0; i < beerItems.length; i++) {
+      beerItems[i].classList.add('beer-container__item--long');
+    }
+  } else {
+    for (let i = 0; i < beerItems.length; i++) {
+      beerItems[i].classList.remove('beer-container__item--long');
+    }
+  }
+}
+
+// Beer template generation and api call
+
 let source = document.getElementById('beer-test').innerHTML;
 let template = Handlebars.compile(source);
 
