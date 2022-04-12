@@ -265,6 +265,10 @@
   background: none;
 }
 
+.page-item {
+  cursor: pointer;
+}
+
 .page-link {
   border: 0px;
   color: #bf431f;

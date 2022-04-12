@@ -190,10 +190,12 @@
             ></div>
             <div class="col-12 d-flex justify-content-center">
               <ul class="pagination">
-                <li class="page-item pagination--next-prev">
+                <li
+                  class="page-item pagination--next-prev"
+                  onclick="changePage('-')"
+                >
                   <a
                     class="page-link pagination--next-prev shadow-none"
-                    href="#"
                     aria-label="Previous"
                   >
                     <span aria-hidden="true"
@@ -202,18 +204,15 @@
                   </a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link shadow-none" href="#">1</a>
+                  <a class="page-link shadow-none page-values">1</a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link shadow-none" href="#">2</a>
+                  <a class="page-link shadow-none page-values">2</a>
                 </li>
-                <li class="page-item">
-                  <a class="page-link shadow-none" href="#">3</a>
-                </li>
-                <li class="page-item page-number">
+
+                <li class="page-item page-number" onclick="changePage('+')">
                   <a
                     class="page-link pagination--next-prev shadow-none"
-                    href="#"
                     aria-label="Next"
                   >
                     <span aria-hidden="true"
@@ -328,7 +327,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script id="beer-test" type="text/x-handlebars-template">
+    <script id="beer-template" type="text/x-handlebars-template">
       {{#each beers}}
         <div class='beer-container__item'>
           <div class='beer-container__image'>
@@ -431,5 +430,6 @@
       {{/each}}
     </script>
     <script src="/page/scripts/script.js"></script>
+    <script src="/page/scripts/fetch-pagination.js"></script>
   </body>
 </html>

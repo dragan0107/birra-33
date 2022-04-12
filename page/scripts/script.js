@@ -46,14 +46,3 @@ function beerDisplay(property) {
 }
 
 // Beer template generation and api call
-
-let source = document.getElementById('beer-test').innerHTML;
-let template = Handlebars.compile(source);
-
-fetch('https://api.punkapi.com/v2/beers?page=1&per_page=10')
-  .then((res) => res.json())
-  .then((data) => {
-    document.getElementById('beer-output').innerHTML = template({
-      beers: data,
-    });
-  });
