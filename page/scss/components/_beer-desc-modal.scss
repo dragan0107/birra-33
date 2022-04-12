@@ -7,7 +7,6 @@
   &__header {
     div {
       width: 100%;
-      color: $orange-brown;
 
       h5 {
         font-family: $alegreya;
@@ -19,12 +18,15 @@
       }
     }
   }
+  .beer-abv__title,
+  .footer-desc__tip,
+  .beer-desc__body__withus,
+  .beer-desc__body__bottomspan,
+  .beer-desc__header {
+    color: $orange-brown;
+  }
 
   &__body {
-    span {
-      color: $orange-brown;
-    }
-
     &__bottomspan {
       margin-bottom: 2em;
       line-height: 4em;
@@ -34,15 +36,6 @@
     .beer-abv {
       margin-bottom: 1.4em;
       margin-right: 2.4em;
-    }
-    .beer-abv__title {
-      color: $orange-brown;
-    }
-
-    .footer-desc {
-      span {
-        color: $orange-brown;
-      }
     }
   }
 }

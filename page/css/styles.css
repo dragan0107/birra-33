@@ -40,7 +40,6 @@
 }
 .beer-desc__header div {
   width: 100%;
-  color: #bf431f;
 }
 .beer-desc__header div h5 {
   font-family: "Alegreya", serif;
@@ -50,7 +49,11 @@
 .beer-desc__header div span {
   font-style: italic;
 }
-.beer-desc__body span {
+.beer-desc .beer-abv__title,
+.beer-desc .footer-desc__tip,
+.beer-desc .beer-desc__body__withus,
+.beer-desc .beer-desc__body__bottomspan,
+.beer-desc .beer-desc__header {
   color: #bf431f;
 }
 .beer-desc__body__bottomspan {
@@ -60,12 +63,6 @@
 .beer-desc__footer .beer-abv {
   margin-bottom: 1.4em;
   margin-right: 2.4em;
-}
-.beer-desc__footer .beer-abv__title {
-  color: #bf431f;
-}
-.beer-desc__footer .footer-desc span {
-  color: #bf431f;
 }
 
 .beer-addtocart span,
@@ -263,9 +260,13 @@
   margin-top: 2em;
 }
 
+.pagination--next-prev,
+.page-link {
+  background: none;
+}
+
 .page-link {
   border: 0px;
-  background: none;
   color: #bf431f;
   font-family: "Alegreya", serif;
   font-size: 1.2em;
@@ -296,10 +297,6 @@
 .pagination--next-prev:hover {
   background: none;
   color: #83351a;
-}
-
-.pagination--next-prev {
-  background: none;
 }
 
 .arrow-pagination {
@@ -452,7 +449,13 @@
 
 .beer-container__item--long {
   width: 100%;
+  height: 22.75em;
+  padding: 1.5em 0.8em;
   flex-direction: row;
+  cursor: default;
+}
+.beer-container__item--long:hover {
+  background: #e3cfab;
 }
 .beer-container__item--long .beer-title-front,
 .beer-container__item--long .beer-desc-front {
@@ -461,6 +464,11 @@
 .beer-container__item--long .beer-title-front {
   font-family: "Alegreya", serif;
   font-size: 2.125em;
+}
+.beer-container__item--long .beer-title-front:hover {
+  color: #793319;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 .beer-container__item--long .beer-desc-front {
   font-family: "Fira Sans", sans-serif;
@@ -473,13 +481,19 @@
   align-items: center;
   flex-direction: row;
   flex: 4;
+  cursor: pointer;
+  height: 100%;
 }
 .beer-container__item--long .beer-container__information {
   flex: 8;
-  justify-content: flex-start;
+  align-self: flex-start;
   align-items: flex-start;
+  margin-top: 0.32em;
 }
-.beer-container__item--long button {
+.beer-container__item--long .beer-container__price {
+  color: #44322c;
+}
+.beer-container__item--long .beer-container--btn {
   width: 12.16em;
   height: 3.06em;
 }
@@ -741,15 +755,14 @@ header {
 .features-links--menu2 {
   position: absolute;
   visibility: hidden;
+  opacity: 0;
 }
 
 .features-links--menu1 {
   top: 230%;
-  opacity: 0;
 }
 
 .features-links--menu2 {
-  opacity: 0;
   top: 150%;
   left: 100%;
 }

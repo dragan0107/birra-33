@@ -64,13 +64,12 @@
 .features-links--menu2 {
   position: absolute;
   visibility: hidden;
+  opacity: 0;
 }
 .features-links--menu1 {
   top: 230%;
-  opacity: 0;
 }
 .features-links--menu2 {
-  opacity: 0;
   top: 150%;
   left: 100%;
 }

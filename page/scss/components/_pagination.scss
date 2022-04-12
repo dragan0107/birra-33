@@ -2,9 +2,12 @@
   margin-top: 2em;
 }
 
+.pagination--next-prev,
+.page-link {
+  background: none;
+}
 .page-link {
   border: 0px;
-  background: none;
   color: $orange-brown;
   font-family: $alegreya;
   font-size: 1.2em;
@@ -37,9 +40,6 @@
     background: none;
     color: $hover-brown;
   }
-}
-.pagination--next-prev {
-  background: none;
 }
 
 .arrow-pagination {

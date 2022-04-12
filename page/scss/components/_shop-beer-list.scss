@@ -58,7 +58,6 @@
   margin-top: 6.68em;
   gap: 2em;
   &--btn {
-    //   width: 13em;
     width: 100%;
     height: 3.68em;
     background: $button-brown;
@@ -136,7 +135,13 @@
 
 .beer-container__item--long {
   width: 100%;
+  height: 22.75em;
+  padding: 1.5em 0.8em;
   flex-direction: row;
+  cursor: default;
+  &:hover {
+    background: $light-brown;
+  }
 
   .beer-title-front,
   .beer-desc-front {
@@ -145,6 +150,11 @@
   .beer-title-front {
     font-family: $alegreya;
     font-size: 2.125em;
+    &:hover {
+      color: #793319;
+      cursor: pointer;
+      transition: $smooth;
+    }
   }
   .beer-desc-front {
     @include fira-sans($fw: 500);
@@ -154,15 +164,22 @@
   .beer-container__image {
     @include flex-center-all;
     flex: 4;
+    cursor: pointer;
+    height: 100%;
   }
 
   .beer-container__information {
     flex: 8;
-    justify-content: flex-start;
+    align-self: flex-start;
     align-items: flex-start;
+    margin-top: 0.32em;
   }
 
-  button {
+  .beer-container__price {
+    color: $nav-dark-brown;
+  }
+
+  .beer-container--btn {
     width: 12.16em;
     height: 3.06em;
   }
