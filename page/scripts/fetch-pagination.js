@@ -34,6 +34,7 @@ for (let i = 0; i < nums.length; i++) {
       currentPage = pageNum * 1 - 1;
       pageNumber[1].classList.add('active');
     }
+    // Preventing the page from going below 1.
     if (currentPage < 1) {
       currentPage = 1;
     }
@@ -53,4 +54,11 @@ function changePage(val) {
 function generatePageNums() {
   nums[0].innerHTML = currentPage;
   nums[1].innerHTML = currentPage + 1;
+}
+
+// We set the current page to the first again and start all over.
+function goToFirst() {
+  currentPage = 1;
+  generatePageNums();
+  fetchBeers(currentPage, 10);
 }
