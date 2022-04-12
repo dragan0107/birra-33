@@ -269,6 +269,10 @@
   cursor: pointer;
 }
 
+.page-item.active .page-link {
+  background-color: #bf431f;
+}
+
 .page-link {
   border: 0px;
   color: #bf431f;

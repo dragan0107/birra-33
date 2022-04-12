@@ -10,6 +10,12 @@
 .page-item {
   cursor: pointer;
 }
+
+.page-item.active {
+  .page-link {
+    background-color: $orange-brown;
+  }
+}
 .page-link {
   border: 0px;
   color: $orange-brown;
