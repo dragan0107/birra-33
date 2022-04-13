@@ -6,13 +6,16 @@ let source = document.getElementById('beer-template').innerHTML;
 let template = Handlebars.compile(source);
 
 const options = document.getElementsByClassName('shop-beer-list-selector')[0];
+const nums = document.getElementsByClassName('page-values');
 
 options.addEventListener('change', () => {
   postsPerPage = options.value;
-  fetchBeers(1, postsPerPage);
+  generatePageNums();
+  goToFirst();
 });
 
 const fetchBeers = (page, amount) => {
+  const results = document.getElementsByClassName('results-showing')[0];
   restOfPosts = maxPosts - postsPerPage * currentPage;
   fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=${amount}`)
     .then((res) => res.json())
@@ -21,13 +24,15 @@ const fetchBeers = (page, amount) => {
       document.getElementById('beer-output').innerHTML = template({
         beers: data,
       });
+      results.innerText = `Showing ${data[0].id}-${
+        data[data.length - 1].id
+      } of ${maxPosts} results`;
     });
 };
 
 // Initial beer fetch
 fetchBeers(1, postsPerPage);
 
-const nums = document.getElementsByClassName('page-values');
 for (let i = 0; i < nums.length; i++) {
   nums[i].addEventListener('click', (e) => {
     const pageNum = e.target.innerHTML;
