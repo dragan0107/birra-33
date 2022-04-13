@@ -14,19 +14,30 @@ options.addEventListener('change', () => {
   goToFirst();
 });
 
+let isFetching = false;
+
 const fetchBeers = (page, amount) => {
   const results = document.getElementsByClassName('results-showing')[0];
+  const loadingSpinner = document.getElementById('loading-spinner');
+  const beerContainer = document.getElementById('beer-output');
   restOfPosts = maxPosts - postsPerPage * currentPage;
+  loadingSpinner.style.display = 'inline-block';
+  beerContainer.style.opacity = '0.2';
   fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=${amount}`)
     .then((res) => res.json())
     .then((data) => {
       beers = data;
-      document.getElementById('beer-output').innerHTML = template({
-        beers: data,
-      });
-      results.innerText = `Showing ${data[0].id}-${
-        data[data.length - 1].id
-      } of ${maxPosts} results`;
+      // To postpone the template rendering just to display the loading spinner.
+      setTimeout(() => {
+        document.getElementById('beer-output').innerHTML = template({
+          beers: data,
+        });
+        results.innerText = `Showing ${data[0].id}-${
+          data[data.length - 1].id
+        } of ${maxPosts} results`;
+        beerContainer.style.opacity = '1';
+        loadingSpinner.style.display = 'none';
+      }, 1500);
     });
 };
 

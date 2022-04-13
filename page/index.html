@@ -184,10 +184,20 @@
                 Show All
               </option>
             </select>
-            <div
-              id="beer-output"
-              class="beer-container d-flex flex-wrap justify-content-center"
-            ></div>
+            <div class="beer-output-wrapper">
+              <div
+                id="beer-output"
+                class="beer-container d-flex flex-wrap justify-content-center"
+              ></div>
+              <div class="ellipsis-wrapper">
+                <div id="loading-spinner" class="lds-ellipsis">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
             <div class="col-12 d-flex justify-content-center">
               <ul class="pagination">
                 <li
