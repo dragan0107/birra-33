@@ -44,5 +44,3 @@ function beerDisplay(property) {
     }
   }
 }
-
-// Beer template generation and api call

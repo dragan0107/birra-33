@@ -14,8 +14,6 @@ options.addEventListener('change', () => {
   goToFirst();
 });
 
-let isFetching = false;
-
 const fetchBeers = (page, amount) => {
   const results = document.getElementsByClassName('results-showing')[0];
   const loadingSpinner = document.getElementById('loading-spinner');
@@ -42,7 +40,7 @@ const fetchBeers = (page, amount) => {
 };
 
 // Initial beer fetch
-fetchBeers(1, postsPerPage);
+fetchBeers(currentPage, postsPerPage);
 
 for (let i = 0; i < nums.length; i++) {
   nums[i].addEventListener('click', (e) => {
@@ -61,11 +59,6 @@ for (let i = 0; i < nums.length; i++) {
       currentPage = pageNum * 1 - 1;
       pageNumber[1].classList.add('active');
     }
-    // Preventing the page from going below 1.
-    if (currentPage < 1) {
-      currentPage = 1;
-    }
-
     generatePageNums();
   });
 }
@@ -83,13 +76,16 @@ function changePage(val) {
   if (currentPage > maxPage) {
     return (currentPage = maxPage);
   }
-  console.log(restOfPosts);
   generatePageNums();
   fetchHelper();
 }
 
 // After manipulating with current page, we refresh the values in the dom with this function.
 function generatePageNums() {
+  // Preventing the page from going below 1.
+  if (currentPage < 1) {
+    currentPage = 1;
+  }
   let maxPage = Math.ceil(maxPosts / postsPerPage);
   nums[0].innerHTML = currentPage;
   nums[1].innerHTML = currentPage + 1;
@@ -111,7 +107,6 @@ function goToFirst() {
 // Function that checks how many beers we can fetch per request (because we set the limit to 35);
 function fetchHelper() {
   let beersToFetch;
-
   if (restOfPosts >= postsPerPage) {
     beersToFetch = postsPerPage;
   } else {
