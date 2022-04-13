@@ -1,8 +1,19 @@
 let currentPage = 1; // Page initialization.
+let postsPerPage = 10;
+let maxPosts = 35;
+let restOfPosts;
 let source = document.getElementById('beer-template').innerHTML;
 let template = Handlebars.compile(source);
 
+const options = document.getElementsByClassName('shop-beer-list-selector')[0];
+
+options.addEventListener('change', () => {
+  postsPerPage = options.value;
+  fetchBeers(1, postsPerPage);
+});
+
 const fetchBeers = (page, amount) => {
+  restOfPosts = maxPosts - postsPerPage * currentPage;
   fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=${amount}`)
     .then((res) => res.json())
     .then((data) => {
@@ -14,7 +25,7 @@ const fetchBeers = (page, amount) => {
 };
 
 // Initial beer fetch
-fetchBeers(1, 10);
+fetchBeers(1, postsPerPage);
 
 const nums = document.getElementsByClassName('page-values');
 for (let i = 0; i < nums.length; i++) {
@@ -23,7 +34,7 @@ for (let i = 0; i < nums.length; i++) {
     let activeElem = document.getElementsByClassName('page-item active');
     let pageNumber = document.querySelectorAll('.page-number');
     activeElem[0].classList.remove('active'); // Remove the currently active element class
-    fetchBeers(pageNum, 10);
+    fetchBeers(pageNum, postsPerPage);
     // Logic for adding the correct active class to the currently clicked page as well as incrementing or decrementing it in the dom.
     if (pageNum > currentPage) {
       currentPage = pageNum * 1;
@@ -43,22 +54,52 @@ for (let i = 0; i < nums.length; i++) {
   });
 }
 
+// New logic
+
 function changePage(val) {
-  val === '+' ? currentPage++ : currentPage--;
+  let maxPage = Math.ceil(maxPosts / postsPerPage);
+  if (val === '+') currentPage++;
+  if (val === '-') {
+    currentPage--;
+    restOfPosts += +postsPerPage;
+  }
   if (currentPage < 1) currentPage = 1;
+  if (currentPage > maxPage) {
+    return (currentPage = maxPage);
+  }
+  console.log(restOfPosts);
   generatePageNums();
-  fetchBeers(currentPage, 10);
+  fetchHelper();
 }
 
 // After manipulating with current page, we refresh the values in the dom with this function.
 function generatePageNums() {
+  let maxPage = Math.ceil(maxPosts / postsPerPage);
   nums[0].innerHTML = currentPage;
   nums[1].innerHTML = currentPage + 1;
+
+  if (currentPage === maxPage) {
+    nums[1].parentNode.style.display = 'none';
+  } else {
+    nums[1].parentNode.style.display = 'block';
+  }
 }
 
 // We set the current page to the first again and start all over.
 function goToFirst() {
   currentPage = 1;
   generatePageNums();
-  fetchBeers(currentPage, 10);
+  fetchBeers(currentPage, postsPerPage);
+}
+
+// Function that checks how many beers we can fetch per request (because we set the limit to 35);
+function fetchHelper() {
+  let beersToFetch;
+
+  if (restOfPosts >= postsPerPage) {
+    beersToFetch = postsPerPage;
+  } else {
+    beersToFetch = restOfPosts;
+  }
+  fetchBeers(currentPage, beersToFetch);
 }

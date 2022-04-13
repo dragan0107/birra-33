@@ -403,6 +403,7 @@
   cursor: pointer;
 }
 .beer-container__item:hover {
+  transition: all 0.25s ease-in-out;
   background: none;
 }
 .beer-container__item .beer-title-front,
