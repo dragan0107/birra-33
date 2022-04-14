@@ -30,40 +30,12 @@
             >
             <div class="nav-info__cart-wrapper">
               <i class="cart-icon fa-solid fa-cart-shopping"></i>
-              <span class="cart-amount">YOUR CART: 1 items</span>
+              <span class="cart-amount"></span>
               <div class="nav-info__cart">
                 <div
+                  id="beer-shop-cart"
                   class="cart-items-wrapper d-flex justify-content-center align-items-center flex-column"
-                >
-                  <div
-                    class="nav-info__cart__item d-flex justify-content-between align-items-center flex-column"
-                  >
-                    <div class="cart-item__info">
-                      <h3>Trashy Blonde</h3>
-                      <span>Quantity: 2</span>
-                    </div>
-                    <div class="cart-item__image">
-                      <img src="/page/images/beer.png" alt="" />
-                      <div class="cart-item__remove">
-                        <i class="fa-solid fa-xmark"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="nav-info__cart__item d-flex justify-content-between align-items-center flex-column"
-                  >
-                    <div class="cart-item__info">
-                      <h3>Trashy Blonde</h3>
-                      <span>Quantity: 2</span>
-                    </div>
-                    <div class="cart-item__image">
-                      <img src="/page/images/beer.png" alt="" />
-                      <div class="cart-item__remove">
-                        <i class="fa-solid fa-xmark"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ></div>
               </div>
             </div>
             <div class="socials socials--header">
@@ -474,9 +446,12 @@
                   >{{name}}</span>
                   <div class='beer-quantity'>
                     <span class='orange-span'>Quantity: </span>
-                    <input type='text' />
+                    <input type='text' onchange='changeQuantity(this.value)' />
                   </div>
-                  <button class='shopbtn beer-addtocart__btn'>
+                  <button
+                    class='shopbtn beer-addtocart__btn'
+                    onclick='addItem({{json this}})'
+                  >
                     Buy!
                   </button>
                 </div>
@@ -486,7 +461,26 @@
         </div>
       {{/each}}
     </script>
+    <script id="cart-item" type="text/x-handlebars-template">
+      {{#each beeritems}}
+        <div
+          class='nav-info__cart__item d-flex justify-content-between align-items-center flex-column'
+        >
+          <div class='cart-item__info'>
+            <h3>{{this.purchasedItem.name}}</h3>
+            <span>Quantity: {{this.quantity}}</span>
+          </div>
+          <div class='cart-item__image'>
+            <img src={{this.purchasedItem.image_url}} alt='' />
+            <div class='cart-item__remove'>
+              <i class='fa-solid fa-xmark'></i>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </script>
     <script src="/page/scripts/script.js"></script>
     <script src="/page/scripts/fetch-pagination.js"></script>
+    <script src="/page/scripts/addToCart.js"></script>
   </body>
 </html>

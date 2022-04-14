@@ -2,8 +2,6 @@ let currentPage = 1; // Page initialization.
 let postsPerPage = 10;
 let maxPosts = 35;
 let restOfPosts;
-let source = document.getElementById('beer-template').innerHTML;
-let template = Handlebars.compile(source);
 
 const options = document.getElementsByClassName('shop-beer-list-selector')[0];
 const nums = document.getElementsByClassName('page-values');
@@ -27,6 +25,8 @@ const fetchBeers = (page, amount) => {
       beers = data;
       // To postpone the template rendering just to display the loading spinner.
       setTimeout(() => {
+        let source = document.getElementById('beer-template').innerHTML;
+        let template = Handlebars.compile(source);
         document.getElementById('beer-output').innerHTML = template({
           beers: data,
         });
