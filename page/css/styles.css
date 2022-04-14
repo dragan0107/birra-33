@@ -187,17 +187,36 @@
 .nav-info__cart {
   position: absolute;
   top: 100%;
+  right: -50%;
   background: #e3cfab;
   height: 25em;
   width: 15em;
   z-index: 111;
   text-align: center;
+  padding: 1em 0;
+  overflow-y: scroll;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 .nav-info__cart__item {
   height: 13em;
   width: 90%;
+  margin-bottom: 0.5em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #bf431f;
+}
+.nav-info__cart::-webkit-scrollbar {
+  width: 0.5em;
+}
+.nav-info__cart::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.nav-info__cart::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.nav-info__cart::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .cart-item__info,
