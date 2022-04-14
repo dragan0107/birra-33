@@ -35,7 +35,7 @@ const fetchBeers = (page, amount) => {
         } of ${maxPosts} results`;
         beerContainer.style.opacity = '1';
         loadingSpinner.style.display = 'none';
-      }, 1500);
+      }, 1000);
     });
 };
 
