@@ -39,3 +39,20 @@ function renderCart() {
     beeritems: shoppingCart,
   });
 }
+
+function removeItem(val) {
+  //   shoppingCart = shoppingCart.filter(
+  //     (el) =>
+  //       el.quantity !== val.quantity &&
+  //       el.purchasedItem.name !== val.purchasedItem.name
+  //   );
+  let idx = shoppingCart.findIndex(
+    (el) =>
+      el.quantity === val.quantity &&
+      el.purchasedItem.name === val.purchasedItem.name
+  );
+  shoppingCart.splice(idx, 1);
+  cartQuantity -= val.quantity;
+  localStorage.setItem('cart', JSON.stringify(shoppingCart));
+  renderCart();
+}
