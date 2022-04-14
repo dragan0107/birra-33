@@ -10,7 +10,7 @@
   padding: 1em 0;
   overflow-y: scroll;
   &__item {
-    height: 13em;
+    height: 14em;
     width: 90%;
     margin-bottom: 0.5em;
     padding-bottom: 0.7em;
@@ -43,6 +43,7 @@
 .cart-item__info {
   @include flex-center-all($direction: column);
   color: $orange-brown;
+  margin-bottom: 0.6em;
   h3 {
     font-size: 1.2em;
   }
@@ -52,7 +53,7 @@
 }
 
 .cart-item__image {
-  height: 70%;
+  height: 65%;
   position: relative;
   img {
     max-height: 100%;

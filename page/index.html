@@ -449,7 +449,9 @@
                     <input type='text' onchange='changeQuantity(this.value)' />
                   </div>
                   <button
+                    type='button'
                     class='shopbtn beer-addtocart__btn'
+                    data-bs-dismiss='modal'
                     onclick='addItem({{json this}})'
                   >
                     Buy!

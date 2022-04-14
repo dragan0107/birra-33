@@ -200,7 +200,7 @@
   /* Handle on hover */
 }
 .nav-info__cart__item {
-  height: 13em;
+  height: 14em;
   width: 90%;
   margin-bottom: 0.5em;
   padding-bottom: 0.7em;
@@ -230,6 +230,7 @@
   align-items: center;
   flex-direction: column;
   color: #bf431f;
+  margin-bottom: 0.6em;
 }
 .cart-item__info h3 {
   font-size: 1.2em;
@@ -239,7 +240,7 @@
 }
 
 .cart-item__image {
-  height: 70%;
+  height: 65%;
   position: relative;
 }
 .cart-item__image img {
