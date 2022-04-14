@@ -63,8 +63,6 @@ for (let i = 0; i < nums.length; i++) {
   });
 }
 
-// New logic
-
 function changePage(val) {
   let maxPage = Math.ceil(maxPosts / postsPerPage);
   if (val === '+') currentPage++;

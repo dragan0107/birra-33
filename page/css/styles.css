@@ -184,6 +184,69 @@
     transform: translate(24px, 0);
   }
 }
+.nav-info__cart {
+  position: absolute;
+  top: 100%;
+  background: #e3cfab;
+  height: 25em;
+  width: 15em;
+  z-index: 111;
+  text-align: center;
+}
+.nav-info__cart__item {
+  height: 13em;
+  width: 90%;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid #bf431f;
+}
+
+.cart-item__info,
+.cart-item__image {
+  width: 100%;
+}
+
+.cart-item__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #bf431f;
+}
+.cart-item__info h3 {
+  font-size: 1.2em;
+}
+.cart-item__info span {
+  font-size: 0.88em;
+}
+
+.cart-item__image {
+  height: 70%;
+  position: relative;
+}
+.cart-item__image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.cart-item__remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  background-color: #978b73;
+  top: 0;
+  right: 1.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.cart-item__remove:hover {
+  background-color: #4b473f;
+}
+
 #shop {
   display: flex;
   justify-content: center;
@@ -243,7 +306,7 @@
 }
 .shop-content__goldbeer--btn {
   width: 17.56em;
-  height: 3.5em;
+  height: 3.56em;
   margin-top: 2.4em;
   background: #bf431f;
 }
@@ -705,7 +768,8 @@ header {
 }
 
 .nav-info__workdays,
-.nav-info__cart {
+.cart-icon,
+.cart-amount {
   font-size: 0.75em;
 }
 
@@ -713,7 +777,8 @@ header {
   margin-top: 4px;
 }
 
-.nav-info__cart {
+.nav-info__cart-wrapper {
+  position: relative;
   margin: 1.5em;
   color: white;
 }

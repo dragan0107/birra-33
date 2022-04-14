@@ -26,14 +26,16 @@ header {
   justify-content: flex-end;
 }
 .nav-info__workdays,
-.nav-info__cart {
+.cart-icon,
+.cart-amount {
   font-size: 0.75em;
 }
 .nav-info__workdays {
   margin-top: 4px;
 }
 
-.nav-info__cart {
+.nav-info__cart-wrapper {
+  position: relative;
   margin: 1.5em;
   color: white;
 }
@@ -79,7 +81,7 @@ header {
 
 // NAVBAR
 
-@import '../components/_navibar';
+@import '../components/navibar';
 
 // BREADCRUMBS
 .breadcrumbs-wrapper {
