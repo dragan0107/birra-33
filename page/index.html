@@ -446,7 +446,11 @@
                   >{{name}}</span>
                   <div class='beer-quantity'>
                     <span class='orange-span'>Quantity: </span>
-                    <input type='text' onchange='changeQuantity(this.value)' />
+                    <input
+                      class='beer-quantity__input--{{id}}'
+                      type='text'
+                      onchange='changeQuantity(this.value)'
+                    />
                   </div>
                   <button
                     type='button'

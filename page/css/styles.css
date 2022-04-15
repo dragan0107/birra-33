@@ -194,7 +194,7 @@
   z-index: 111;
   text-align: center;
   padding: 1em 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   /* Track */
   /* Handle */
   /* Handle on hover */

@@ -19,17 +19,25 @@ let shopItem = {};
 
 function addItem(item) {
   shopItem.purchasedItem = item;
-  // To prevent quantity of 0 from being added to the cart.
   if (shopItem.quantity) {
-    shoppingCart.push(shopItem);
-    localStorage.setItem('cart', JSON.stringify(shoppingCart));
-    shopItem = {};
-    renderCart();
+    let duplicate = checkDuplicate(shopItem);
+    if (!duplicate) {
+      shoppingCart.push(shopItem);
+      clearInput(shopItem.purchasedItem.id);
+      localStorage.setItem('cart', JSON.stringify(shoppingCart));
+      shopItem = {};
+      renderCart();
+    }
   }
 }
 function changeQuantity(val) {
   shopItem.quantity = val;
   cartQuantity += +val;
+}
+
+function clearInput(id) {
+  let elem = document.querySelector(`.beer-quantity__input--${id}`);
+  elem.value = '';
 }
 
 function renderCart() {
@@ -40,12 +48,19 @@ function renderCart() {
   });
 }
 
+function checkDuplicate(item) {
+  let idx = shoppingCart.findIndex(
+    (el) => el.purchasedItem.name === item.purchasedItem.name
+  );
+  if (idx === -1) return false;
+  shoppingCart[idx].quantity =
+    Number(shoppingCart[idx].quantity) + +item.quantity;
+  localStorage.setItem('cart', JSON.stringify(shoppingCart));
+  clearInput(item.purchasedItem.id);
+  renderCart();
+  return true;
+}
 function removeItem(val) {
-  //   shoppingCart = shoppingCart.filter(
-  //     (el) =>
-  //       el.quantity !== val.quantity &&
-  //       el.purchasedItem.name !== val.purchasedItem.name
-  //   );
   let idx = shoppingCart.findIndex(
     (el) =>
       el.quantity === val.quantity &&
