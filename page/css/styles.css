@@ -189,12 +189,12 @@
   top: 100%;
   right: -50%;
   background: #e3cfab;
-  height: 25em;
+  max-height: 25em;
   width: 15em;
-  z-index: 111;
+  z-index: -1;
   text-align: center;
-  padding: 1em 0;
   overflow-y: auto;
+  opacity: 0;
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -202,8 +202,8 @@
 .nav-info__cart__item {
   height: 14em;
   width: 90%;
-  margin-bottom: 0.5em;
   padding-bottom: 0.7em;
+  margin: 0.7em 0;
   border-bottom: 1px solid #bf431f;
 }
 .nav-info__cart::-webkit-scrollbar {
@@ -365,14 +365,6 @@
   color: #bf431f;
   margin-top: 1.35em;
   margin-bottom: 1.45em;
-}
-
-.shop-cart__info {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  color: white;
-  margin-bottom: 1.5em;
 }
 
 .shop-categories__list {
@@ -801,6 +793,13 @@ header {
   position: relative;
   margin: 1.5em;
   color: white;
+  cursor: pointer;
+}
+
+.nav-info__cart-wrapper:hover .nav-info__cart {
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+  z-index: 111;
 }
 
 .socials {

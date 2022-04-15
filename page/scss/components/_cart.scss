@@ -3,17 +3,18 @@
   top: 100%;
   right: -50%;
   background: $light-brown;
-  height: 25em;
+  max-height: 25em;
   width: 15em;
-  z-index: 111;
+  z-index: -1;
   text-align: center;
-  padding: 1em 0;
   overflow-y: auto;
+  opacity: 0;
   &__item {
     height: 14em;
     width: 90%;
-    margin-bottom: 0.5em;
+    // margin-bottom: 0.5em;
     padding-bottom: 0.7em;
+    margin: 0.7em 0;
     border-bottom: 1px solid $orange-brown;
   }
   &::-webkit-scrollbar {

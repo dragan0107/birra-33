@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="/page/css/styles.css" />
     <title>Birra 33</title>
   </head>
@@ -129,8 +130,16 @@
         <div class="shop-content-shop">
           <div class="shop-sidebar-wrapper">
             <div class="shop-cart">
-              <h3 class="shop-sidebar__title">MY CART</h3>
-              <span class="shop-cart__info">No products in the cart.</span>
+              <input type="text" placeholder="Search beer by name" />
+              <p>
+                <label for="amount">Price range:</label>
+                <input
+                  type="text"
+                  id="amount"
+                  readonly
+                  style="border: 0; color: #f6931f; font-weight: bold"
+                />
+              </p>
             </div>
             <div class="shop-categories">
               <h3 class="shop-sidebar__title">CATEGORIES</h3>

@@ -38,6 +38,13 @@ header {
   position: relative;
   margin: 1.5em;
   color: white;
+  cursor: pointer;
+}
+
+.nav-info__cart-wrapper:hover .nav-info__cart {
+  transition: $smooth;
+  opacity: 1;
+  z-index: 111;
 }
 
 .socials {
