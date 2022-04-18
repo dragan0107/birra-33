@@ -140,10 +140,10 @@
                 <h6>ABV Range</h6>
                 <div class="abv-range__inputs">
                   <div class="abv-range__field">
-                    <span class="min-span"></span>
+                    <span class="min-span">From: 1</span>
                   </div>
                   <div class="abv-range__field">
-                    <span class="max-span"></span>
+                    <span class="max-span">To: 56</span>
                   </div>
                 </div>
                 <div class="abv-range__slider">
@@ -155,14 +155,14 @@
                     class="range-min"
                     min="1"
                     max="55"
-                    value="13"
+                    value="1"
                   />
                   <input
                     type="range"
                     class="range-max"
                     min="1"
-                    max="55"
-                    value="43"
+                    max="56"
+                    value="56"
                   />
                 </div>
               </div>
@@ -209,6 +209,9 @@
               </div>
               <button onclick="updateQuery()" class="shopbtn filter-btn">
                 APPLY
+              </button>
+              <button onclick="updateQuery('clear')" class="shopbtn filter-btn">
+                CLEAR
               </button>
             </div>
             <div class="shop-categories">

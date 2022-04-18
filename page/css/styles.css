@@ -279,8 +279,8 @@
 .abv-range__progress {
   background: #bf431f;
   position: absolute;
-  left: 25%;
-  right: 25%;
+  left: 0%;
+  right: 0%;
 }
 .abv-range__range-inputs {
   display: flex;

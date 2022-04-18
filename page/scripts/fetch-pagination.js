@@ -1,10 +1,10 @@
-let currentPage = 1; // Page initialization.
-let postsPerPage = 10;
-let maxPosts = 35;
-let restOfPosts;
+let currentPage = 1,
+  postsPerPage = 10,
+  maxPosts = 35,
+  restOfPosts;
 
-const options = document.getElementsByClassName('shop-beer-list-selector')[0];
-const nums = document.getElementsByClassName('page-values');
+const options = document.getElementsByClassName('shop-beer-list-selector')[0],
+  nums = document.getElementsByClassName('page-values');
 
 options.addEventListener('change', () => {
   postsPerPage = options.value;
@@ -14,15 +14,15 @@ options.addEventListener('change', () => {
 
 // Filter query logic
 
-const dateInputs = document.querySelectorAll('.abv-range__dates input');
-const foodInputs = document.querySelectorAll('.food-filter input');
-let query;
-let beerName = '';
-let abvFrom = '';
-let abvTo = '';
-let brewedAfter = '';
-let brewedBefore = '';
-let food = '';
+const dateInputs = document.querySelectorAll('.abv-range__dates input'),
+  foodInputs = document.querySelectorAll('.food-filter input');
+let query,
+  beerName = '',
+  abvFrom = '',
+  abvTo = '',
+  brewedAfter = '',
+  brewedBefore = '',
+  food = '';
 
 dateInputs.forEach((inp) => {
   inp.addEventListener('change', (e) => {
@@ -47,12 +47,11 @@ beerInput.addEventListener('change', (e) => {
   beerName = `&beer_name=${e.target.value}`;
 });
 
+// Slider Controller Logic
 const rangeInputs = document.querySelectorAll('.abv-range__range-inputs input'),
   progress = document.querySelector('.abv-range__progress');
 let minSpan = document.querySelector('.min-span'),
   maxSpan = document.querySelector('.max-span');
-minSpan.innerHTML = `From: ${rangeInputs[0].value}`;
-maxSpan.innerHTML = `To: ${rangeInputs[1].value}`;
 
 let rangeGap = 3;
 rangeInputs.forEach((inp) => {
@@ -77,16 +76,28 @@ rangeInputs.forEach((inp) => {
   });
 });
 
-function updateQuery() {
-  query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
+function updateQuery(val) {
+  if (val) {
+    dateInputs.forEach((inp) => {
+      inp.value = '';
+    });
+    foodInputs.forEach((inp) => {
+      inp.checked = false;
+    });
+    beerInput.value = '';
+    beerName = '';
+    query = '';
+  } else {
+    query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
+  }
+
   fetchHelper();
 }
-//
 
 const fetchBeers = (page, amount) => {
-  const results = document.getElementsByClassName('results-showing')[0];
-  const loadingSpinner = document.getElementById('loading-spinner');
-  const beerContainer = document.getElementById('beer-output');
+  const results = document.getElementsByClassName('results-showing')[0],
+    loadingSpinner = document.getElementById('loading-spinner'),
+    beerContainer = document.getElementById('beer-output');
   restOfPosts = maxPosts - postsPerPage * currentPage;
   loadingSpinner.style.display = 'inline-block';
   beerContainer.style.opacity = '0.2';
@@ -98,9 +109,8 @@ const fetchBeers = (page, amount) => {
     .then((res) => res.json())
     .then((data) => {
       beers = data;
-      // To postpone the template rendering just to display the loading spinner.
-      let source = document.getElementById('beer-template').innerHTML;
-      let template = Handlebars.compile(source);
+      let source = document.getElementById('beer-template').innerHTML,
+        template = Handlebars.compile(source);
       document.getElementById('beer-output').innerHTML = template({
         beers: data,
       });
@@ -118,8 +128,8 @@ fetchBeers(currentPage, postsPerPage);
 for (let i = 0; i < nums.length; i++) {
   nums[i].addEventListener('click', (e) => {
     const pageNum = e.target.innerHTML;
-    let activeElem = document.getElementsByClassName('page-item active');
-    let pageNumber = document.querySelectorAll('.page-number');
+    let activeElem = document.getElementsByClassName('page-item active'),
+      pageNumber = document.querySelectorAll('.page-number');
     activeElem[0].classList.remove('active'); // Remove the currently active element class
     fetchBeers(pageNum, postsPerPage);
     // Logic for adding the correct active class to the currently clicked page as well as incrementing or decrementing it in the dom.
