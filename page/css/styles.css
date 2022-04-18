@@ -409,6 +409,18 @@
 .shop-cart .filter-btn:hover {
   background: #bf431f;
 }
+.shop-cart .beer-name,
+.shop-cart .date-input {
+  padding: 0.4em 1em;
+  font-size: 0.85em;
+  background: #f4e8ce;
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 100%;
+}
+.shop-cart .beer-name {
+  font-size: 1em;
+}
 .shop-cart input[name=food] {
   accent-color: #bf431f;
 }
@@ -590,6 +602,12 @@
   font-size: 0.875em;
   color: #bf431f;
   margin-bottom: 1.31em;
+}
+
+.no-results-notification {
+  visibility: hidden;
+  text-align: center;
+  color: #bf431f;
 }
 
 .beer-container__information {

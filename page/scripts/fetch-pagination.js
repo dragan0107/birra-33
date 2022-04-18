@@ -4,7 +4,7 @@ let currentPage = 1,
   restOfPosts;
 
 const options = document.getElementsByClassName('shop-beer-list-selector')[0],
-  nums = document.getElementsByClassName('page-values');
+  nums = document.querySelectorAll('.page-values');
 
 options.addEventListener('change', () => {
   postsPerPage = options.value;
@@ -53,7 +53,7 @@ const rangeInputs = document.querySelectorAll('.abv-range__range-inputs input'),
 let minSpan = document.querySelector('.min-span'),
   maxSpan = document.querySelector('.max-span');
 
-let rangeGap = 3;
+let rangeGap = 2;
 rangeInputs.forEach((inp) => {
   inp.addEventListener('input', (e) => {
     let minVal = parseInt(rangeInputs[0].value),
@@ -91,7 +91,8 @@ function updateQuery(val) {
     query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
   }
 
-  fetchHelper();
+  // fetchHelper();
+  goToFirst();
 }
 
 const fetchBeers = (page, amount) => {
@@ -111,22 +112,28 @@ const fetchBeers = (page, amount) => {
       beers = data;
       let source = document.getElementById('beer-template').innerHTML,
         template = Handlebars.compile(source);
-      document.getElementById('beer-output').innerHTML = template({
-        beers: data,
-      });
-      results.innerText = `Showing ${data[0].id}-${
-        data[data.length - 1].id
-      } of ${maxPosts} results`;
+      let noResNotification = document.querySelector(
+        '.no-results-notification'
+      );
+      if (data) {
+        document.getElementById('beer-output').innerHTML = template({
+          beers: data,
+        });
+      }
+      noResNotification.style.visibility = 'visible';
       beerContainer.style.opacity = '1';
       loadingSpinner.style.display = 'none';
+    })
+    .catch((err) => {
+      console.log(err);
     });
 };
 
 // Initial beer fetch
 fetchBeers(currentPage, postsPerPage);
 
-for (let i = 0; i < nums.length; i++) {
-  nums[i].addEventListener('click', (e) => {
+nums.forEach((num) => {
+  num.addEventListener('click', (e) => {
     const pageNum = e.target.innerHTML;
     let activeElem = document.getElementsByClassName('page-item active'),
       pageNumber = document.querySelectorAll('.page-number');
@@ -144,7 +151,7 @@ for (let i = 0; i < nums.length; i++) {
     }
     generatePageNums();
   });
-}
+});
 
 function changePage(val) {
   let maxPage = Math.ceil(maxPosts / postsPerPage);

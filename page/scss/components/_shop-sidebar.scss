@@ -25,6 +25,18 @@
       background: $orange-brown;
     }
   }
+  .beer-name,
+  .date-input {
+    padding: 0.4em 1em;
+    font-size: 0.85em;
+    background: $shop-bgd;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 100%;
+  }
+  .beer-name {
+    font-size: 1em;
+  }
   input[name='food'] {
     accent-color: $orange-brown;
   }

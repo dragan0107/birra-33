@@ -72,6 +72,11 @@
     margin-bottom: 1.31em;
   }
 }
+.no-results-notification {
+  visibility: hidden;
+  text-align: center;
+  color: $orange-brown;
+}
 
 .beer-container__information {
   @include flex-center-all($direction: column);
