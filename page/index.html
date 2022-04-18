@@ -131,15 +131,39 @@
           <div class="shop-sidebar-wrapper">
             <div class="shop-cart">
               <input type="text" placeholder="Search beer by name" />
-              <p>
-                <label for="amount">Price range:</label>
-                <input
-                  type="text"
-                  id="amount"
-                  readonly
-                  style="border: 0; color: #f6931f; font-weight: bold"
-                />
-              </p>
+              <div class="abv-range">
+                <div class="abv-range__inputs">
+                  <div class="abv-range__field">
+                    <span class="min-span">Min</span>
+                  </div>
+                  <div class="abv-range__field">
+                    <span class="max-span">Max</span>
+                  </div>
+                </div>
+                <div class="abv-range__slider">
+                  <div class="abv-range__progress"></div>
+                </div>
+                <div class="abv-range__range-inputs">
+                  <input
+                    type="range"
+                    class="range-min"
+                    min="1"
+                    max="80"
+                    value="20"
+                  />
+                  <input
+                    type="range"
+                    class="range-max"
+                    min="1"
+                    max="80"
+                    value="60"
+                  />
+                </div>
+                <div class="abv-range__dates">
+                  <input type="date" name="" id="" />
+                  <input type="date" name="" id="" />
+                </div>
+              </div>
             </div>
             <div class="shop-categories">
               <h3 class="shop-sidebar__title">CATEGORIES</h3>
@@ -497,5 +521,6 @@
     <script src="/page/scripts/script.js"></script>
     <script src="/page/scripts/fetch-pagination.js"></script>
     <script src="/page/scripts/addToCart.js"></script>
+    <script src="/page/scripts/sliderController.js"></script>
   </body>
 </html>

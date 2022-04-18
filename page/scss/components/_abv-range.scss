@@ -1,0 +1,39 @@
+.abv-range {
+  &__slider {
+    background: #ddd;
+    position: relative;
+    margin-top: 1em;
+  }
+  &__slider,
+  &__progress {
+    height: 5px;
+    border-radius: 5px;
+  }
+  &__progress {
+    background: #22bbd6;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+  }
+  &__range-inputs {
+    display: flex;
+    position: relative;
+    top: -10px;
+    input {
+      position: absolute;
+      width: 100%;
+      background: none;
+      appearance: none;
+      pointer-events: none;
+    }
+    input[type='range']::-webkit-slider-thumb {
+      height: 17px;
+      width: 17px;
+      border-radius: 50%;
+      appearance: none;
+      pointer-events: auto;
+      background: #22bbd6;
+      z-index: 222;
+    }
+  }
+}
