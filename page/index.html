@@ -170,21 +170,23 @@
                 <div class="abv-range__dates__after">
                   <span>Brewed after</span>
                   <input
-                    class="date-input date-after"
-                    min="2007-01-01"
-                    max="2018-12-31"
+                    id="date-after"
+                    class="date-input"
+                    min="2007-01"
+                    max="2018-12"
                     value="2007-01-01"
-                    type="date"
+                    type="month"
                   />
                 </div>
                 <div class="abv-range__dates__before">
                   <span>Brewed before</span>
                   <input
-                    class="date-input date-before"
-                    min="2007-01-01"
-                    max="2018-12-31"
+                    id=" date-before"
+                    class="date-input"
+                    min="2007-01"
+                    max="2018-12"
                     value="2018-12-31"
-                    type="date"
+                    type="month"
                   />
                 </div>
               </div>
@@ -569,7 +571,7 @@
       {{/each}}
     </script>
     <script src="/page/scripts/script.js"></script>
-    <script src="/page/scripts/fetch-pagination.js"></script>
+    <script src="/page/scripts/fetch-pagination-filter.js"></script>
     <script src="/page/scripts/addToCart.js"></script>
     <script src="/page/scripts/sliderController.js"></script>
   </body>

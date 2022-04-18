@@ -27,8 +27,8 @@ let query,
 dateInputs.forEach((inp) => {
   inp.addEventListener('change', (e) => {
     let val = e.target.value;
-    let date = `${val.substring(5, 8)}${val.substring(0, 4)}`;
-    if (e.target.className === 'date-after') {
+    let date = `${val.substring(5, 8)}-${val.substring(0, 4)}`;
+    if (e.target.id === 'date-after') {
       brewedAfter = `&brewed_after=${date}`;
     } else {
       brewedBefore = `&brewed_before=${date}`;
@@ -50,11 +50,11 @@ beerInput.addEventListener('change', (e) => {
 // Slider Controller Logic
 const rangeInputs = document.querySelectorAll('.abv-range__range-inputs input'),
   progress = document.querySelector('.abv-range__progress');
-let minSpan = document.querySelector('.min-span'),
-  maxSpan = document.querySelector('.max-span');
 
 let rangeGap = 2;
 rangeInputs.forEach((inp) => {
+  let minSpan = document.querySelector('.min-span'),
+    maxSpan = document.querySelector('.max-span');
   inp.addEventListener('input', (e) => {
     let minVal = parseInt(rangeInputs[0].value),
       maxVal = parseInt(rangeInputs[1].value);
@@ -109,23 +109,19 @@ const fetchBeers = (page, amount) => {
   )
     .then((res) => res.json())
     .then((data) => {
-      beers = data;
       let source = document.getElementById('beer-template').innerHTML,
-        template = Handlebars.compile(source);
-      let noResNotification = document.querySelector(
-        '.no-results-notification'
-      );
-      if (data) {
-        document.getElementById('beer-output').innerHTML = template({
-          beers: data,
-        });
-      }
-      noResNotification.style.visibility = 'visible';
+        template = Handlebars.compile(source),
+        noResNotification = document.querySelector('.no-results-notification');
+      beers = data;
+      document.getElementById('beer-output').innerHTML = template({
+        beers: data,
+      });
+      data.length === 0
+        ? (noResNotification.style.visibility = 'visible')
+        : (noResNotification.style.visibility = 'hidden');
+
       beerContainer.style.opacity = '1';
       loadingSpinner.style.display = 'none';
-    })
-    .catch((err) => {
-      console.log(err);
     });
 };
 

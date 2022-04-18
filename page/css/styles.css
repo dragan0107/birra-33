@@ -424,6 +424,10 @@
 .shop-cart input[name=food] {
   accent-color: #bf431f;
 }
+.shop-cart h4,
+.shop-cart h6 {
+  color: #bf431f;
+}
 
 .shop-categories {
   padding: 1.9em 1.8em 2em;
