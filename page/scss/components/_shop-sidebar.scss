@@ -10,7 +10,24 @@
 }
 .shop-cart {
   border-bottom: 1px solid $shop-bgd;
-  padding: 2em;
+  @include flex-justify-center($direction: column);
+  gap: 1em;
+  padding: 1.6em;
+  .food-filter {
+    @include flex-justify-center($direction: column);
+  }
+  .filter-btn {
+    background: #d57f2c;
+    height: 2.5em;
+    font-size: 1.1em;
+    cursor: pointer;
+    &:hover {
+      background: $orange-brown;
+    }
+  }
+  input[name='food'] {
+    accent-color: $orange-brown;
+  }
 }
 
 .shop-categories {

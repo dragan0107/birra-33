@@ -1,6 +1,6 @@
 .abv-range {
   &__slider {
-    background: #ddd;
+    background: $shop-bgd;
     position: relative;
     margin-top: 1em;
   }
@@ -10,7 +10,7 @@
     border-radius: 5px;
   }
   &__progress {
-    background: #22bbd6;
+    background: $orange-brown;
     position: absolute;
     left: 25%;
     right: 25%;
@@ -27,12 +27,12 @@
       pointer-events: none;
     }
     input[type='range']::-webkit-slider-thumb {
-      height: 17px;
-      width: 17px;
+      height: 15px;
+      width: 15px;
       border-radius: 50%;
       appearance: none;
       pointer-events: auto;
-      background: #22bbd6;
+      background: $orange-brown;
       z-index: 222;
     }
   }

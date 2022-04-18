@@ -12,6 +12,77 @@ options.addEventListener('change', () => {
   goToFirst();
 });
 
+// Filter query logic
+
+const dateInputs = document.querySelectorAll('.abv-range__dates input');
+const foodInputs = document.querySelectorAll('.food-filter input');
+let query;
+let beerName = '';
+let abvFrom = '';
+let abvTo = '';
+let brewedAfter = '';
+let brewedBefore = '';
+let food = '';
+
+dateInputs.forEach((inp) => {
+  inp.addEventListener('change', (e) => {
+    let val = e.target.value;
+    let date = `${val.substring(5, 8)}${val.substring(0, 4)}`;
+    if (e.target.className === 'date-after') {
+      brewedAfter = `&brewed_after=${date}`;
+    } else {
+      brewedBefore = `&brewed_before=${date}`;
+    }
+  });
+});
+
+foodInputs.forEach((inp) => {
+  inp.addEventListener('input', (e) => {
+    food = `&food=${e.target.value}`;
+  });
+});
+
+const beerInput = document.querySelector('.beer-name');
+beerInput.addEventListener('change', (e) => {
+  beerName = `&beer_name=${e.target.value}`;
+});
+
+const rangeInputs = document.querySelectorAll('.abv-range__range-inputs input'),
+  progress = document.querySelector('.abv-range__progress');
+let minSpan = document.querySelector('.min-span'),
+  maxSpan = document.querySelector('.max-span');
+minSpan.innerHTML = `From: ${rangeInputs[0].value}`;
+maxSpan.innerHTML = `To: ${rangeInputs[1].value}`;
+
+let rangeGap = 3;
+rangeInputs.forEach((inp) => {
+  inp.addEventListener('input', (e) => {
+    let minVal = parseInt(rangeInputs[0].value),
+      maxVal = parseInt(rangeInputs[1].value);
+
+    if (maxVal - minVal < rangeGap) {
+      if (e.target.className === 'range-min') {
+        rangeInputs[0].value = maxVal - rangeGap;
+      } else {
+        rangeInputs[1].value = minVal + rangeGap;
+      }
+    } else {
+      abvFrom = `&abv_gt=${rangeInputs[0].value}`;
+      abvTo = `&abv_lt=${rangeInputs[1].value}`;
+      progress.style.left = (minVal / rangeInputs[0].max) * 100 + '%';
+      progress.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + '%';
+      minSpan.innerHTML = `From: ${rangeInputs[0].value}`;
+      maxSpan.innerHTML = `To: ${rangeInputs[1].value}`;
+    }
+  });
+});
+
+function updateQuery() {
+  query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
+  fetchHelper();
+}
+//
+
 const fetchBeers = (page, amount) => {
   const results = document.getElementsByClassName('results-showing')[0];
   const loadingSpinner = document.getElementById('loading-spinner');
@@ -19,23 +90,25 @@ const fetchBeers = (page, amount) => {
   restOfPosts = maxPosts - postsPerPage * currentPage;
   loadingSpinner.style.display = 'inline-block';
   beerContainer.style.opacity = '0.2';
-  fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=${amount}`)
+  fetch(
+    query
+      ? `https://api.punkapi.com/v2/beers?page=${page}&per_page=${amount}${query}`
+      : `https://api.punkapi.com/v2/beers?page=${page}&per_page=${amount}`
+  )
     .then((res) => res.json())
     .then((data) => {
       beers = data;
       // To postpone the template rendering just to display the loading spinner.
-      setTimeout(() => {
-        let source = document.getElementById('beer-template').innerHTML;
-        let template = Handlebars.compile(source);
-        document.getElementById('beer-output').innerHTML = template({
-          beers: data,
-        });
-        results.innerText = `Showing ${data[0].id}-${
-          data[data.length - 1].id
-        } of ${maxPosts} results`;
-        beerContainer.style.opacity = '1';
-        loadingSpinner.style.display = 'none';
-      }, 1000);
+      let source = document.getElementById('beer-template').innerHTML;
+      let template = Handlebars.compile(source);
+      document.getElementById('beer-output').innerHTML = template({
+        beers: data,
+      });
+      results.innerText = `Showing ${data[0].id}-${
+        data[data.length - 1].id
+      } of ${maxPosts} results`;
+      beerContainer.style.opacity = '1';
+      loadingSpinner.style.display = 'none';
     });
 };
 

@@ -268,7 +268,7 @@
 }
 
 .abv-range__slider {
-  background: #ddd;
+  background: #f4e8ce;
   position: relative;
   margin-top: 1em;
 }
@@ -277,7 +277,7 @@
   border-radius: 5px;
 }
 .abv-range__progress {
-  background: #22bbd6;
+  background: #bf431f;
   position: absolute;
   left: 25%;
   right: 25%;
@@ -295,12 +295,12 @@
   pointer-events: none;
 }
 .abv-range__range-inputs input[type=range]::-webkit-slider-thumb {
-  height: 17px;
-  width: 17px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   appearance: none;
   pointer-events: auto;
-  background: #22bbd6;
+  background: #bf431f;
   z-index: 222;
 }
 
@@ -389,7 +389,28 @@
 
 .shop-cart {
   border-bottom: 1px solid #f4e8ce;
-  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.6em;
+}
+.shop-cart .food-filter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.shop-cart .filter-btn {
+  background: #d57f2c;
+  height: 2.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.shop-cart .filter-btn:hover {
+  background: #bf431f;
+}
+.shop-cart input[name=food] {
+  accent-color: #bf431f;
 }
 
 .shop-categories {

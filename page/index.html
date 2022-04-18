@@ -130,14 +130,20 @@
         <div class="shop-content-shop">
           <div class="shop-sidebar-wrapper">
             <div class="shop-cart">
-              <input type="text" placeholder="Search beer by name" />
+              <h4>Filters</h4>
+              <input
+                class="beer-name"
+                type="text"
+                placeholder="Search beer by name"
+              />
               <div class="abv-range">
+                <h6>ABV Range</h6>
                 <div class="abv-range__inputs">
                   <div class="abv-range__field">
-                    <span class="min-span">Min</span>
+                    <span class="min-span"></span>
                   </div>
                   <div class="abv-range__field">
-                    <span class="max-span">Max</span>
+                    <span class="max-span"></span>
                   </div>
                 </div>
                 <div class="abv-range__slider">
@@ -148,22 +154,62 @@
                     type="range"
                     class="range-min"
                     min="1"
-                    max="80"
-                    value="20"
+                    max="55"
+                    value="13"
                   />
                   <input
                     type="range"
                     class="range-max"
                     min="1"
-                    max="80"
-                    value="60"
+                    max="55"
+                    value="43"
                   />
                 </div>
-                <div class="abv-range__dates">
-                  <input type="date" name="" id="" />
-                  <input type="date" name="" id="" />
+              </div>
+              <div class="abv-range__dates">
+                <div class="abv-range__dates__after">
+                  <span>Brewed after</span>
+                  <input
+                    class="date-after"
+                    min="2007-01-01"
+                    max="2018-12-31"
+                    value="2007-01-01"
+                    type="date"
+                  />
+                </div>
+                <div class="abv-range__dates__before">
+                  <span>Brewed before</span>
+                  <input
+                    class="date-before"
+                    min="2007-01-01"
+                    max="2018-12-31"
+                    value="2018-12-31"
+                    type="date"
+                  />
                 </div>
               </div>
+              <div class="food-filter">
+                <h6>Foods</h6>
+                <div class="food-filter-pair">
+                  <input type="radio" name="food" id="" value="chicken" />
+                  <label for="food">Chicken</label>
+                </div>
+                <div class="food-filter-pair">
+                  <input type="radio" name="food" id="" value="cake" />
+                  <label for="food">Cake</label>
+                </div>
+                <div class="food-filter-pair">
+                  <input type="radio" name="food" id="" value="cheese" />
+                  <label for="food">Cheese</label>
+                </div>
+                <div class="food-filter-pair">
+                  <input type="radio" name="food" id="" value="salad" />
+                  <label for="food">Salad</label>
+                </div>
+              </div>
+              <button onclick="updateQuery()" class="shopbtn filter-btn">
+                APPLY
+              </button>
             </div>
             <div class="shop-categories">
               <h3 class="shop-sidebar__title">CATEGORIES</h3>
