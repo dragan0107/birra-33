@@ -600,7 +600,11 @@
   margin-top: 1em;
   margin-bottom: 1.5em;
 }
-.beer-container__image i {
+.beer-container__image__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   position: absolute;
   opacity: 0;
   top: 90%;
@@ -610,8 +614,9 @@
   color: white;
   filter: drop-shadow(-4px 4px 2px #525151);
   transition: all 0.25s ease-in-out;
+  gap: 0.4em;
 }
-.beer-container__image:hover i {
+.beer-container__image:hover .beer-container__image__info {
   top: 50%;
   opacity: 1;
 }

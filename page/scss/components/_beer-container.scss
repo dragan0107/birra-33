@@ -40,7 +40,9 @@
     position: relative;
     margin-top: 1em;
     margin-bottom: 1.5em;
-    i {
+
+    &__info {
+      @include flex-center-all;
       position: absolute;
       opacity: 0;
       top: 90%;
@@ -50,15 +52,12 @@
       color: white;
       filter: drop-shadow(-4px 4px 2px #525151);
       transition: $smooth;
+      gap: 0.4em;
     }
-
-    &:hover {
-      i {
-        top: 50%;
-        opacity: 1;
-      }
+    &:hover &__info {
+      top: 50%;
+      opacity: 1;
     }
-
     img {
       max-height: 100%;
       max-width: 100%;

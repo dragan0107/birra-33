@@ -445,11 +445,16 @@
       {{#each beers}}
         <div class='beer-container__item'>
           <div class='beer-container__image'>
-            <i
-              class='bi bi-link-45deg'
-              data-bs-toggle='modal'
-              data-bs-target='#beer-{{id}}'
-            ></i>
+            <div class='beer-container__image__info'>
+              <i
+                class='bi bi-link-45deg'
+                data-bs-toggle='modal'
+                data-bs-target='#beer-{{id}}'
+              ></i>
+              <a href='/page/product.html?{{id}}'><i
+                  class='fa-solid fa-circle-info'
+                ></i></a>
+            </div>
             <div
               class='modal fade'
               id='beer-{{id}}'
@@ -500,7 +505,7 @@
             <img src={{image_url}} alt='' />
           </div>
           <div class='beer-container__information'>
-            <h1 class='beer-title-front'>{{name}}</h1>
+            <h1 class='beer-title-front'>{{name}} </h1>
             <p class='beer-desc-front'>{{description}}</p>
             <span class='beer-container__price'>${{ibu}}</span>
             <button
@@ -573,6 +578,5 @@
     <script src="/page/scripts/script.js"></script>
     <script src="/page/scripts/fetch-pagination-filter.js"></script>
     <script src="/page/scripts/addToCart.js"></script>
-    <script src="/page/scripts/sliderController.js"></script>
   </body>
 </html>
