@@ -395,11 +395,6 @@
   gap: 1em;
   padding: 1.6em;
 }
-.shop-cart .food-filter {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 .shop-cart .filter-btn {
   background: #d57f2c;
   height: 2.5em;
@@ -427,6 +422,31 @@
 .shop-cart h4,
 .shop-cart h6 {
   color: #bf431f;
+}
+
+.food-filter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.food-filter h6 {
+  margin: 1em 0;
+}
+.food-filter .food-filter-pair {
+  margin-bottom: 0.2em;
+}
+.food-filter .food-filter-pair input {
+  margin-right: 0.5em;
+}
+
+.shop-cart__title {
+  font-size: 1.9em;
+  text-align: center;
+}
+
+.abv-range__title,
+.food-filter__title {
+  font-size: 1.1em;
 }
 
 .shop-categories {

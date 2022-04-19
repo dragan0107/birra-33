@@ -13,9 +13,7 @@
   @include flex-justify-center($direction: column);
   gap: 1em;
   padding: 1.6em;
-  .food-filter {
-    @include flex-justify-center($direction: column);
-  }
+
   .filter-btn {
     background: #d57f2c;
     height: 2.5em;
@@ -44,6 +42,29 @@
   h6 {
     color: $orange-brown;
   }
+}
+
+.food-filter {
+  @include flex-justify-center($direction: column);
+  h6 {
+    margin: 1em 0;
+  }
+  .food-filter-pair {
+    margin-bottom: 0.2em;
+    input {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.shop-cart__title {
+  font-size: 1.9em;
+  text-align: center;
+}
+
+.abv-range__title,
+.food-filter__title {
+  font-size: 1.1em;
 }
 
 .shop-categories {

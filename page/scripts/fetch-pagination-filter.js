@@ -85,7 +85,12 @@ function updateQuery(val) {
       inp.checked = false;
     });
     beerInput.value = '';
-    beerName = '';
+    (beerName = ''),
+      (abvFrom = ''),
+      (abvTo = ''),
+      (brewedAfter = ''),
+      (brewedBefore = ''),
+      (food = '');
     query = '';
   } else {
     query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
@@ -151,7 +156,14 @@ nums.forEach((num) => {
 
 function changePage(val) {
   let maxPage = Math.ceil(maxPosts / postsPerPage);
-  if (val === '+') currentPage++;
+  if (val === '+') {
+    if (beers.length < postsPerPage) {
+      currentPage = currentPage;
+      nums[1].parentNode.style.display = 'none';
+    } else {
+      currentPage++;
+    }
+  }
   if (val === '-') {
     currentPage--;
     restOfPosts += +postsPerPage;
@@ -170,11 +182,13 @@ function generatePageNums() {
   if (currentPage < 1) {
     currentPage = 1;
   }
+
   let maxPage = Math.ceil(maxPosts / postsPerPage);
+
   nums[0].innerHTML = currentPage;
   nums[1].innerHTML = currentPage + 1;
 
-  if (currentPage === maxPage) {
+  if (currentPage === maxPage || beers.length < postsPerPage) {
     nums[1].parentNode.style.display = 'none';
   } else {
     nums[1].parentNode.style.display = 'block';
