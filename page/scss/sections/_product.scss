@@ -1,0 +1,66 @@
+#product {
+  background: $shop-bgd;
+  padding: 5.52em 0;
+  .product-info-wrapper {
+    width: 61.5%;
+  }
+}
+
+.product__info {
+  height: 27.56em;
+  color: $nav-dark-brown;
+
+  &__image {
+    position: relative;
+    img {
+      height: 94%;
+      object-fit: contain;
+    }
+    .magn-wrapper {
+      @include flex-center-all;
+      position: absolute;
+      top: 0.8em;
+      right: 0.8em;
+      height: 2.25em;
+      width: 2.25em;
+      background: white;
+      border-radius: 50%;
+      i {
+        font-size: 1.1em;
+      }
+    }
+  }
+  &__details {
+    margin-left: 3.75em;
+    &__title {
+      font-family: $alegreya;
+      font-size: 2.125em;
+      margin-bottom: 0.7em;
+    }
+
+    &__price,
+    &__desc {
+      @include fira-sans($fw: 500);
+    }
+
+    &__price {
+      font-size: 1.125em;
+      margin-bottom: 0.85em;
+    }
+
+    &__desc {
+      font-size: 0.875em;
+    }
+  }
+
+  &__addcart {
+    input {
+      padding: 0.8em;
+      background: none;
+      text-align: center;
+      outline: none;
+      border: 1px solid $light-brown;
+      border-radius: 5px;
+    }
+  }
+}

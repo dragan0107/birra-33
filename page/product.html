@@ -22,33 +22,37 @@
   </head>
   <body>
     <div id="header-output"></div>
-    <section id="product">
-      <div class="product__info">
-        <div class="product__info__image">
-          <img src="/page/images/beer.png" alt="" />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="product__info__details">
-          <h1>Chasin Freashies</h1>
-          <span>$220.99</span>
-          <p>
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis
-            autem vel eum iriure dolor in hendrerit in vulputate velit esse
-            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-            vero eros et accumsan et iusto odio dignissim qui blandit praesent
-            luptatum zzril delenit augue duis.
-          </p>
-          <div class="product__info__addcart">
-            <input type="number" name="" id="" value="1" />
-            <button>ADD TO CART</button>
+    <section id="product" class="d-flex justify-content-center">
+      <div class="product-info-wrapper">
+        <article class="product__info d-flex">
+          <div class="product__info__image">
+            <img src="/page/images/beer.png" alt="" />
+            <div class="magn-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
           </div>
-          <hr />
-          <div class="product__info__categ-id">
-            <span>Categories: Blonde, LightBeer</span>
-            <span>Product ID: 236</span>
+          <div class="product__info__details d-flex flex-column">
+            <h1 class="product__info__details__title">CHASINFREASHIES</h1>
+            <span class="product__info__details__price">$220.99</span>
+            <p class="product__info__details__desc">
+              Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+              consequat. Duis autem vel eum iriure dolor in hendrerit in
+              vulputate velit esse molestie consequat, vel illum dolore eu
+              feugiat nulla facilisis at vero eros et accumsan et iusto odio
+              dignissim qui blandit praesent luptatum zzril delenit augue duis.
+            </p>
+            <div class="product__info__addcart">
+              <input type="number" name="" id="" value="1" />
+              <button class="shopbtn">ADD TO CART</button>
+            </div>
+            <hr />
+            <div class="product__info__categ-id">
+              <span>Categories: Blonde, LightBeer</span>
+              <span>Product ID: 236</span>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
     <div id="footer-output"></div>

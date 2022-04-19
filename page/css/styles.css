@@ -770,6 +770,69 @@
   gap: 2em;
 }
 
+#product {
+  background: #f4e8ce;
+  padding: 5.52em 0;
+}
+#product .product-info-wrapper {
+  width: 61.5%;
+}
+
+.product__info {
+  height: 27.56em;
+  color: #44322c;
+}
+.product__info__image {
+  position: relative;
+}
+.product__info__image img {
+  height: 94%;
+  object-fit: contain;
+}
+.product__info__image .magn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 0.8em;
+  right: 0.8em;
+  height: 2.25em;
+  width: 2.25em;
+  background: white;
+  border-radius: 50%;
+}
+.product__info__image .magn-wrapper i {
+  font-size: 1.1em;
+}
+.product__info__details {
+  margin-left: 3.75em;
+}
+.product__info__details__title {
+  font-family: "Alegreya", serif;
+  font-size: 2.125em;
+  margin-bottom: 0.7em;
+}
+.product__info__details__price, .product__info__details__desc {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+}
+.product__info__details__price {
+  font-size: 1.125em;
+  margin-bottom: 0.85em;
+}
+.product__info__details__desc {
+  font-size: 0.875em;
+}
+.product__info__addcart input {
+  padding: 0.8em;
+  background: none;
+  text-align: center;
+  outline: none;
+  border: 1px solid #e3cfab;
+  border-radius: 5px;
+}
+
 #footer {
   background: url("/page/images/footer.jpg");
 }
