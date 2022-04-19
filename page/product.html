@@ -42,14 +42,29 @@
               feugiat nulla facilisis at vero eros et accumsan et iusto odio
               dignissim qui blandit praesent luptatum zzril delenit augue duis.
             </p>
-            <div class="product__info__addcart">
-              <input type="number" name="" id="" value="1" />
-              <button class="shopbtn">ADD TO CART</button>
+            <div class="product__info__addcart d-flex">
+              <div class="product__info__addcart__inputbox d-flex">
+                <input type="number" name="" id="" value="1" />
+                <div class="input-arrows-wrapper d-flex flex-column">
+                  <div class="input-arrow">
+                    <i class="fa-solid fa-chevron-up"></i>
+                  </div>
+                  <div class="input-arrow">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+              <button class="shopbtn product-add-btn">
+                <span>ADD TO CART</span>
+              </button>
             </div>
             <hr />
-            <div class="product__info__categ-id">
-              <span>Categories: Blonde, LightBeer</span>
-              <span>Product ID: 236</span>
+            <div class="product__info__categ-id d-flex flex-column">
+              <span
+                >Categories:
+                <span class="product-categ-list">Blonde, LightBeer</span></span
+              >
+              <span class="product-categ-id">Product ID: 236</span>
             </div>
           </div>
         </article>
