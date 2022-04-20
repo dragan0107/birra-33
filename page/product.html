@@ -23,59 +23,9 @@
   <body>
     <div id="header-output"></div>
     <section id="product" class="d-flex justify-content-center">
-      <div class="product-info-wrapper">
-        <article class="product__info d-flex">
-          <div class="product__info__image">
-            <img src="/page/images/beer.png" alt="" />
-            <div class="magn-wrapper">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-          </div>
-          <div class="product__info__details d-flex flex-column">
-            <h1 class="product__info__details__title">CHASINFREASHIES</h1>
-            <span class="product__info__details__price">$220.99</span>
-            <p class="product__info__details__desc">
-              Ut wisi enim ad minim veniam, quis nostrud exerci tation
-              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-              consequat. Duis autem vel eum iriure dolor in hendrerit in
-              vulputate velit esse molestie consequat, vel illum dolore eu
-              feugiat nulla facilisis at vero eros et accumsan et iusto odio
-              dignissim qui blandit praesent luptatum zzril delenit augue duis.
-            </p>
-            <div class="product__info__addcart d-flex">
-              <div class="product__info__addcart__inputbox d-flex">
-                <input type="number" name="" id="" value="1" />
-                <div class="input-arrows-wrapper d-flex flex-column">
-                  <div class="input-arrow">
-                    <i class="fa-solid fa-chevron-up"></i>
-                  </div>
-                  <div class="input-arrow">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </div>
-                </div>
-              </div>
-              <button class="shopbtn product-add-btn">
-                <span>ADD TO CART</span>
-              </button>
-            </div>
-            <hr />
-            <div class="product__info__categ-id d-flex flex-column">
-              <span
-                >Categories:
-                <span class="product-categ-list">Blonde, LightBeer</span></span
-              >
-              <span class="product-categ-id">Product ID: 236</span>
-            </div>
-          </div>
-        </article>
-      </div>
+      <div id="product-output" class="product-info-wrapper"></div>
     </section>
     <div id="footer-output"></div>
-    <script>
-      let url = document.location.href;
-      let queryz = url.split('?');
-      console.log(queryz);
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -282,6 +232,45 @@
           </div>
         </div>
       {{/each}}
+    </script>
+    <script id="product-template" type="text/x-handlebars-template">
+      <article class='product__info d-flex'>
+        <div class='product__info__image'>
+          <img src='/page/images/beer.png' alt='' />
+          <div class='magn-wrapper'>
+            <i class='fa-solid fa-magnifying-glass'></i>
+          </div>
+        </div>
+        <div class='product__info__details d-flex flex-column'>
+          <h1 class='product__info__details__title'>{{name}}</h1>
+          <span class='product__info__details__price'>{{ibu}}</span>
+          <p class='product__info__details__desc'>
+            {{description}}
+          </p>
+          <div class='product__info__addcart d-flex'>
+            <div class='product__info__addcart__inputbox d-flex'>
+              <input type='number' name='' id='product-amount' value='1' />
+              <div class='input-arrows-wrapper d-flex flex-column'>
+                <div class='input-arrow' onclick="changeAmount('add')">
+                  <i class='fa-solid fa-chevron-up'></i>
+                </div>
+                <div class='input-arrow' onclick='changeAmount()'>
+                  <i class='fa-solid fa-chevron-down'></i>
+                </div>
+              </div>
+            </div>
+            <button class='shopbtn product-add-btn'>
+              <span>ADD TO CART</span>
+            </button>
+          </div>
+          <hr />
+          <div class='product__info__categ-id d-flex flex-column'>
+            <span>Categories:
+              <span class='product-categ-list'>Blonde, LightBeer</span></span>
+            <span class='product-categ-id'>Product ID: {{id}}</span>
+          </div>
+        </div>
+      </article>
     </script>
     <script src="/page/scripts/product.js"></script>
     <script src="/page/scripts/script.js"></script>

@@ -58,14 +58,16 @@
     margin-bottom: 0.4em;
     input {
       padding: 0.9em 0;
-      width: 10em;
-      height: 3.05em;
+      width: 11.5em;
+      height: 3.4em;
       background: none;
       text-align: center;
       outline: none;
       border: 1px solid $light-brown;
       border-right: none;
       border-radius: 5px 0 0 5px;
+      @include fira-sans($fw: 400);
+      font-size: 0.875em;
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

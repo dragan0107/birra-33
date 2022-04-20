@@ -830,14 +830,17 @@
 }
 .product__info__addcart input {
   padding: 0.9em 0;
-  width: 10em;
-  height: 3.05em;
+  width: 11.5em;
+  height: 3.4em;
   background: none;
   text-align: center;
   outline: none;
   border: 1px solid #e3cfab;
   border-right: none;
   border-radius: 5px 0 0 5px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.875em;
 }
 .product__info__addcart input::-webkit-outer-spin-button,
 .product__info__addcart input::-webkit-inner-spin-button {
