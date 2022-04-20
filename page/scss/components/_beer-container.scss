@@ -53,6 +53,10 @@
       filter: drop-shadow(-4px 4px 2px #525151);
       transition: $smooth;
       gap: 0.4em;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
     &:hover &__info {
       top: 50%;

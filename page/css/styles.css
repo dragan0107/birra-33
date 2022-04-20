@@ -616,6 +616,10 @@
   transition: all 0.25s ease-in-out;
   gap: 0.4em;
 }
+.beer-container__image__info a {
+  text-decoration: none;
+  color: white;
+}
 .beer-container__image:hover .beer-container__image__info {
   top: 50%;
   opacity: 1;
@@ -783,7 +787,9 @@
   color: #44322c;
 }
 .product__info__image {
+  flex: 3.7;
   position: relative;
+  text-align: center;
 }
 .product__info__image img {
   height: 94%;
@@ -806,6 +812,7 @@
   font-size: 1.1em;
 }
 .product__info__details {
+  flex: 8.3;
   margin-left: 3.75em;
 }
 .product__info__details__title {

@@ -18,26 +18,32 @@ renderCart();
 let shopItem = {};
 
 function addItem(item) {
+  let prodAmt = document.getElementById('product-amount');
+  if (arguments[1]) {
+    changeQuantity(prodAmt.value);
+  }
   shopItem.purchasedItem = item;
   if (shopItem.quantity) {
     let duplicate = checkDuplicate(shopItem);
     if (!duplicate) {
       shoppingCart.push(shopItem);
-      clearInput(shopItem.purchasedItem.id);
       localStorage.setItem('cart', JSON.stringify(shoppingCart));
-      shopItem = {};
+      clearInput(shopItem.purchasedItem.id);
       renderCart();
+
+      shopItem = {};
     }
   }
+  prodAmt.value = 1;
 }
 function changeQuantity(val) {
-  shopItem.quantity = val;
+  shopItem.quantity = +val;
   cartQuantity += +val;
 }
 
 function clearInput(id) {
   let elem = document.querySelector(`.beer-quantity__input--${id}`);
-  elem.value = '';
+  if (elem) elem.value = '';
 }
 
 function renderCart() {

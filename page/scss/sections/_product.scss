@@ -11,7 +11,9 @@
   color: $nav-dark-brown;
 
   &__image {
+    flex: 3.7;
     position: relative;
+    text-align: center;
     img {
       height: 94%;
       object-fit: contain;
@@ -31,6 +33,7 @@
     }
   }
   &__details {
+    flex: 8.3;
     margin-left: 3.75em;
     &__title {
       font-family: $alegreya;

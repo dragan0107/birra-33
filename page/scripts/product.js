@@ -24,6 +24,7 @@ const fetchProduct = () => {
 };
 
 fetchProduct();
+
 function changeAmount(val) {
   let elem = document.getElementById('product-amount');
   val ? elem.value++ : elem.value--;

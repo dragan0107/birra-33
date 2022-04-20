@@ -236,14 +236,14 @@
     <script id="product-template" type="text/x-handlebars-template">
       <article class='product__info d-flex'>
         <div class='product__info__image'>
-          <img src='/page/images/beer.png' alt='' />
+          <img src={{image_url}} alt='' />
           <div class='magn-wrapper'>
             <i class='fa-solid fa-magnifying-glass'></i>
           </div>
         </div>
         <div class='product__info__details d-flex flex-column'>
           <h1 class='product__info__details__title'>{{name}}</h1>
-          <span class='product__info__details__price'>{{ibu}}</span>
+          <span class='product__info__details__price'>${{ibu}}</span>
           <p class='product__info__details__desc'>
             {{description}}
           </p>
@@ -259,22 +259,33 @@
                 </div>
               </div>
             </div>
-            <button class='shopbtn product-add-btn'>
+            <button
+              class='shopbtn product-add-btn'
+              onclick='addItem({{json this}}, 1)'
+            >
               <span>ADD TO CART</span>
             </button>
           </div>
           <hr />
           <div class='product__info__categ-id d-flex flex-column'>
             <span>Categories:
-              <span class='product-categ-list'>Blonde, LightBeer</span></span>
+              {{#each ingredients.hops}}
+                <span class='product-categ-list'>{{name}},</span>
+              {{/each}}
+            </span>
             <span class='product-categ-id'>Product ID: {{id}}</span>
           </div>
         </div>
       </article>
     </script>
+    <div class="scroll-top">
+      <a class="d-flex justify-content-center align-items-center" href="#"
+        ><i class="fa-solid fa-angle-up"></i
+      ></a>
+    </div>
     <script src="/page/scripts/product.js"></script>
     <script src="/page/scripts/script.js"></script>
-    <script src="/page/scripts/fetch-pagination-filter.js"></script>
+    <!-- <script src="/page/scripts/fetch-pagination-filter.js"></script> -->
     <script src="/page/scripts/addToCart.js"></script>
   </body>
 </html>
