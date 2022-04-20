@@ -106,12 +106,22 @@ header {
     color: $button-brown;
   }
   .breadcrumbs__currentpage {
-    transition: $smooth;
     @include fira-sans($fw: 500);
     color: $nav-dark-brown;
-    cursor: pointer;
-    &:hover {
-      color: $orange-brown;
+
+    a {
+      text-decoration: none;
+      color: $nav-dark-brown;
+      transition: $smooth;
+      &:hover {
+        cursor: pointer;
+        color: $button-brown;
+      }
+    }
+    i {
+      font-size: 0.8em;
+      color: $button-brown;
+      margin: 0.8em;
     }
   }
 }

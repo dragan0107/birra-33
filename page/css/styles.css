@@ -110,6 +110,11 @@
   margin-top: 1.1em;
   font-size: 1.2em;
 }
+.beer-quantity input::-webkit-outer-spin-button,
+.beer-quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .orange-span {
   color: #bf431f;
@@ -257,7 +262,8 @@
   position: absolute;
   height: 1em;
   width: 1em;
-  background-color: #978b73;
+  border-radius: 10%;
+  background-color: #bf431f;
   top: 0;
   right: 1.5em;
   font-size: 1.2em;
@@ -1206,12 +1212,21 @@ header {
   color: #d57f2c;
 }
 .breadcrumbs .breadcrumbs__currentpage {
-  transition: all 0.25s ease-in-out;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
   color: #44322c;
-  cursor: pointer;
 }
-.breadcrumbs .breadcrumbs__currentpage:hover {
-  color: #bf431f;
+.breadcrumbs .breadcrumbs__currentpage a {
+  text-decoration: none;
+  color: #44322c;
+  transition: all 0.25s ease-in-out;
+}
+.breadcrumbs .breadcrumbs__currentpage a:hover {
+  cursor: pointer;
+  color: #d57f2c;
+}
+.breadcrumbs .breadcrumbs__currentpage i {
+  font-size: 0.8em;
+  color: #d57f2c;
+  margin: 0.8em;
 }

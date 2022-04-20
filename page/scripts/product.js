@@ -20,6 +20,8 @@ const fetchProduct = () => {
       document.getElementById('product-output').innerHTML = tempProduct(
         data[0]
       );
+      document.querySelector('.breadcrumbs__beer-name').innerHTML =
+        data[0].name;
     });
 };
 
