@@ -50,11 +50,11 @@ beerInput.addEventListener('change', (e) => {
 // Slider Controller Logic
 const rangeInputs = document.querySelectorAll('.abv-range__range-inputs input'),
   progress = document.querySelector('.abv-range__progress');
+let minSpan = document.querySelector('.min-span'),
+  maxSpan = document.querySelector('.max-span');
 
 let rangeGap = 2;
 rangeInputs.forEach((inp) => {
-  let minSpan = document.querySelector('.min-span'),
-    maxSpan = document.querySelector('.max-span');
   inp.addEventListener('input', (e) => {
     let minVal = parseInt(rangeInputs[0].value),
       maxVal = parseInt(rangeInputs[1].value);
@@ -72,11 +72,18 @@ rangeInputs.forEach((inp) => {
       progress.style.right = 100 - (maxVal / rangeInputs[1].max) * 100 + '%';
       minSpan.innerHTML = `From: ${rangeInputs[0].value}`;
       maxSpan.innerHTML = `To: ${rangeInputs[1].value}`;
+      updateAbvSpans(rangeInputs[0].value, rangeInputs[1].value);
     }
   });
 });
 
+function updateAbvSpans(val1, val2) {
+  minSpan.innerHTML = `From: ${val1}`;
+  maxSpan.innerHTML = `To: ${val2}`;
+}
+
 function updateQuery(val) {
+  // If there is value, it will reset all filters.
   if (val) {
     dateInputs.forEach((inp) => {
       inp.value = '';
@@ -92,6 +99,11 @@ function updateQuery(val) {
       (brewedBefore = ''),
       (food = '');
     query = '';
+    progress.style.left = '0%';
+    progress.style.right = '0%';
+    rangeInputs[0].value = 1;
+    rangeInputs[1].value = 56;
+    updateAbvSpans(rangeInputs[0].value, rangeInputs[1].value);
   } else {
     query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
   }

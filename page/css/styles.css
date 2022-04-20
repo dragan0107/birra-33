@@ -619,6 +619,7 @@
 .beer-container__image__info a {
   text-decoration: none;
   color: white;
+  margin-left: 0.5em;
 }
 .beer-container__image:hover .beer-container__image__info {
   top: 50%;
