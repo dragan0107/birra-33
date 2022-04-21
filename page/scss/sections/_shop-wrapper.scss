@@ -23,6 +23,11 @@
     font-size: 13px;
   }
 }
+@media (max-width: $max-mobile) {
+  .shop-content {
+    width: 99%;
+  }
+}
 @media (max-width: $max-medium) {
   .shop-content {
     font-size: 10px;

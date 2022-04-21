@@ -30,6 +30,10 @@
   width: 61.5%;
   margin-top: 1em;
   margin-bottom: 2.1em;
+
+  &__item {
+    flex: 4;
+  }
 }
 
 .footer-link-list {
@@ -79,5 +83,33 @@
   a {
     color: $shop-bgd;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer-box {
+    width: 90%;
+    font-size: 13px;
+  }
+}
+@media (max-width: $max-tablets) {
+  .footer-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__item {
+      width: 60%;
+      margin-bottom: 1em;
+    }
+  }
+  .footer-link-list {
+    padding-left: 0;
+  }
+  .socials--footer {
+    justify-content: center;
+  }
+
+  .copyright-wrapper {
+    text-align: center;
   }
 }

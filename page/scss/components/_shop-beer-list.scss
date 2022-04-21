@@ -58,3 +58,24 @@
 .beer-row {
   margin-bottom: 1.81em;
 }
+
+@media (max-width: $max-medium) {
+  .shop-beer-list-selector {
+    font-size: 12px;
+  }
+}
+@media (max-width: $max-tablets) {
+  .shop-beer-list {
+    width: 100%;
+  }
+  .shop-beer-list-selector {
+    font-size: 10px;
+    top: -1em;
+  }
+}
+
+@media (max-width: $min-mobile) {
+  .shop-beer-list-selector {
+    font-size: 8px;
+  }
+}
