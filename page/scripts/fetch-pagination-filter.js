@@ -139,6 +139,7 @@ const fetchBeers = (page, amount) => {
 
       beerContainer.style.opacity = '1';
       loadingSpinner.style.display = 'none';
+      generatePageNums();
     });
 };
 
@@ -202,8 +203,18 @@ function generatePageNums() {
 
   if (currentPage === maxPage || beers.length < postsPerPage) {
     nums[1].parentNode.style.display = 'none';
+    document.querySelector('.page-arrow-right').style.display = 'none';
+    if (currentPage === 1) {
+      document
+        .querySelectorAll('.page-arrow-left')
+        .forEach((el) => (el.style.display = 'none'));
+    }
   } else {
     nums[1].parentNode.style.display = 'block';
+    document.querySelector('.page-arrow-right').style.display = 'block';
+    document
+      .querySelectorAll('.page-arrow-left')
+      .forEach((el) => (el.style.display = 'block'));
   }
 }
 

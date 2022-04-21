@@ -1,12 +1,12 @@
-let beerItemSource = document.getElementById('cart-item').innerHTML;
-let shopItemsTemplate = Handlebars.compile(beerItemSource);
+let beerItemSource = document.getElementById('cart-item').innerHTML,
+  shopItemsTemplate = Handlebars.compile(beerItemSource);
 
 // Helper to stringify the object passed in the function.
 Handlebars.registerHelper('json', function (context) {
   return JSON.stringify(context);
 });
-let shoppingCart = JSON.parse(localStorage.getItem('cart'));
-let cartQuantity = 0;
+let shoppingCart = JSON.parse(localStorage.getItem('cart')),
+  cartQuantity = 0;
 
 //Initial cart quantity calculation and shop cart render.
 shoppingCart.forEach((item) => {
@@ -30,7 +30,6 @@ function addItem(item) {
       localStorage.setItem('cart', JSON.stringify(shoppingCart));
       clearInput(shopItem.purchasedItem.id);
       renderCart();
-
       shopItem = {};
     }
   }

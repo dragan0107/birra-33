@@ -11,8 +11,8 @@ document.getElementById('footer-output').innerHTML = tempFooter();
 // Change amount
 
 const fetchProduct = () => {
-  let url = document.location.href;
-  let id = url.split('?')[1];
+  let url = document.location.href,
+    id = url.split('?')[1];
 
   fetch(`https://api.punkapi.com/v2/beers/${id}`)
     .then((res) => res.json())
