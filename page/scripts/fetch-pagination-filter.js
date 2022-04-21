@@ -14,7 +14,7 @@ options.addEventListener('change', () => {
 
 // Filter query logic
 
-const dateInputs = document.querySelectorAll('.abv-range__dates input'),
+const dateInputs = document.querySelectorAll('.brewery-range__dates input'),
   foodInputs = document.querySelectorAll('.food-filter input');
 let query,
   beerName = '',

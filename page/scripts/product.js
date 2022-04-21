@@ -22,6 +22,7 @@ const fetchProduct = () => {
       );
       document.querySelector('.breadcrumbs__beer-name').innerHTML =
         data[0].name;
+      document.title = `${data[0].name} – Brewery & pub`;
     });
 };
 

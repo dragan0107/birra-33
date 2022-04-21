@@ -33,7 +33,7 @@ function addItem(item) {
       shopItem = {};
     }
   }
-  prodAmt.value = 1;
+  if (prodAmt) prodAmt.value = 1;
 }
 function changeQuantity(val) {
   shopItem.quantity = +val;

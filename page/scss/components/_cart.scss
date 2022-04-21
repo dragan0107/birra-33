@@ -9,6 +9,7 @@
   text-align: center;
   overflow-y: auto;
   opacity: 0;
+  box-shadow: 1px 5px 22px -4px rgba(87, 87, 87, 0.71);
   &__item {
     height: 17em;
     width: 90%;
@@ -22,12 +23,12 @@
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: $light-brown;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: #888;
+    background: $orange-brown;
   }
 
   /* Handle on hover */

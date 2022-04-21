@@ -29,6 +29,7 @@ header {
 .cart-icon,
 .cart-amount {
   font-size: 0.75em;
+  transition: $smooth;
 }
 .nav-info__workdays {
   margin-top: 4px;
@@ -42,9 +43,9 @@ header {
 }
 
 .nav-info__cart-wrapper:hover .nav-info__cart {
-  transition: $smooth;
   opacity: 1;
   z-index: 111;
+  transition: $smooth;
 }
 
 .socials {

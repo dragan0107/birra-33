@@ -87,6 +87,7 @@
       width: 1.34em;
       height: 100%;
       cursor: pointer;
+      transition: $smooth;
       &:hover {
         background-color: $orange-brown;
       }

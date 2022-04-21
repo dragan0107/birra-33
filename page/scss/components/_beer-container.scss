@@ -24,8 +24,8 @@
     width: 30.8%;
     background: $light-brown;
     cursor: pointer;
+    transition: $smooth;
     &:hover {
-      transition: $smooth;
       background: none;
     }
 

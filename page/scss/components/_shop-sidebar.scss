@@ -12,7 +12,8 @@
   border-bottom: 1px solid $shop-bgd;
   @include flex-justify-center($direction: column);
   gap: 1em;
-  padding: 1.6em;
+  padding: 1.8em;
+  @include fira-sans($fw: 500);
 
   .filter-btn {
     background: #d57f2c;
@@ -41,7 +42,18 @@
   h4,
   h6 {
     color: $orange-brown;
+    font-family: $alegreya;
+    text-transform: uppercase;
   }
+}
+.brewery-range__dates {
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+.brewery-range__dates,
+.food-filter {
+  border-top: 1px solid rgb(240, 240, 240);
 }
 
 .food-filter {

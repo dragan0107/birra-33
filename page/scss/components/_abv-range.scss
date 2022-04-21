@@ -1,4 +1,6 @@
 .abv-range {
+  border-top: 1px solid rgb(240, 240, 240);
+  padding-top: 1em;
   &__slider {
     background: $shop-bgd;
     position: relative;
@@ -19,6 +21,7 @@
     display: flex;
     position: relative;
     top: -10px;
+
     input {
       position: absolute;
       width: 100%;
@@ -36,4 +39,8 @@
       z-index: 222;
     }
   }
+}
+
+.span-14p {
+  font-size: 14px;
 }

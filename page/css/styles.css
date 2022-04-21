@@ -200,6 +200,7 @@
   text-align: center;
   overflow-y: auto;
   opacity: 0;
+  box-shadow: 1px 5px 22px -4px rgba(87, 87, 87, 0.71);
   /* Track */
   /* Handle */
   /* Handle on hover */
@@ -215,10 +216,10 @@
   width: 0.5em;
 }
 .nav-info__cart::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #e3cfab;
 }
 .nav-info__cart::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #bf431f;
 }
 .nav-info__cart::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -273,6 +274,10 @@
   background-color: #4b473f;
 }
 
+.abv-range {
+  border-top: 1px solid rgb(240, 240, 240);
+  padding-top: 1em;
+}
 .abv-range__slider {
   background: #f4e8ce;
   position: relative;
@@ -308,6 +313,10 @@
   pointer-events: auto;
   background: #bf431f;
   z-index: 222;
+}
+
+.span-14p {
+  font-size: 14px;
 }
 
 #shop {
@@ -399,7 +408,9 @@
   justify-content: center;
   flex-direction: column;
   gap: 1em;
-  padding: 1.6em;
+  padding: 1.8em;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
 }
 .shop-cart .filter-btn {
   background: #d57f2c;
@@ -428,6 +439,18 @@
 .shop-cart h4,
 .shop-cart h6 {
   color: #bf431f;
+  font-family: "Alegreya", serif;
+  text-transform: uppercase;
+}
+
+.brewery-range__dates {
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+.brewery-range__dates,
+.food-filter {
+  border-top: 1px solid rgb(240, 240, 240);
 }
 
 .food-filter {
@@ -591,9 +614,9 @@
   width: 30.8%;
   background: #e3cfab;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 .beer-container__item:hover {
-  transition: all 0.25s ease-in-out;
   background: none;
 }
 .beer-container__item .beer-title-front,
@@ -874,6 +897,7 @@
   width: 1.34em;
   height: 100%;
   cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 .product__info__addcart .input-arrow:hover {
   background-color: #bf431f;
@@ -1023,6 +1047,7 @@ header {
 .cart-icon,
 .cart-amount {
   font-size: 0.75em;
+  transition: all 0.25s ease-in-out;
 }
 
 .nav-info__workdays {
@@ -1037,9 +1062,9 @@ header {
 }
 
 .nav-info__cart-wrapper:hover .nav-info__cart {
-  transition: all 0.25s ease-in-out;
   opacity: 1;
   z-index: 111;
+  transition: all 0.25s ease-in-out;
 }
 
 .socials {
