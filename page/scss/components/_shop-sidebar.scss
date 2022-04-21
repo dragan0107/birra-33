@@ -120,3 +120,19 @@
   font-size: 0.8em;
   margin-right: 0.6em;
 }
+
+@media (max-width: $max-tablets) {
+  .shop-sidebar-wrapper {
+    flex-direction: row;
+    width: 90%;
+    align-self: center;
+  }
+  .shop-cart {
+    flex: 6;
+  }
+  .shop-categories {
+    flex: 6;
+    font-size: 15px;
+    padding-top: 0em;
+  }
+}

@@ -14,15 +14,18 @@
 .navibar {
   @include flex-align-center;
   justify-content: space-between;
-  .navibar__links {
-    @include flex-center-all;
-    list-style: none;
-    margin-bottom: 0;
-  }
+}
+.navibar__links {
+  @include flex-center-all;
+  list-style: none;
+  margin-bottom: 0;
+  height: 100%;
 }
 
 .navibar__link {
+  @include flex-center-all;
   padding: 1.8em 1em;
+  height: 100%;
   @include fira-sans($fw: 500);
   color: #f4e8ce;
   cursor: pointer;
@@ -92,4 +95,10 @@
 
 .pages-submenu:hover .features-links--menu2 {
   top: 80%;
+}
+
+@media (max-width: $max-tablets) {
+  .navibar__links {
+    display: none;
+  }
 }

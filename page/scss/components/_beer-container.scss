@@ -24,11 +24,10 @@
     width: 30.8%;
     background: $light-brown;
     cursor: pointer;
-    transition: $smooth;
     &:hover {
+      transition: $smooth;
       background: none;
     }
-
     .beer-title-front,
     .beer-desc-front {
       display: none;
@@ -136,5 +135,14 @@
   .beer-container--btn {
     width: 12.16em;
     height: 3.06em;
+  }
+}
+
+@media (max-width: $max-medium) {
+  .beer-container {
+    font-size: 10px;
+  }
+  .beer-container--btn {
+    font-size: 10px;
   }
 }

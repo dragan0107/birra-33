@@ -8,3 +8,10 @@
   width: 100%;
   gap: 2em;
 }
+
+@media (max-width: $max-tablets) {
+  .shop-content-shop {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}

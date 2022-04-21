@@ -16,3 +16,15 @@
   cursor: pointer;
   transition: $smooth;
 }
+
+@media (max-width: 1400px) {
+  .shop-content {
+    width: 90%;
+    font-size: 13px;
+  }
+}
+@media (max-width: $max-medium) {
+  .shop-content {
+    font-size: 10px;
+  }
+}

@@ -126,3 +126,12 @@ header {
     }
   }
 }
+
+@media (max-width: 1400px) {
+  .nav-info,
+  .navibar,
+  .breadcrumbs {
+    width: 90%;
+    font-size: 13px;
+  }
+}

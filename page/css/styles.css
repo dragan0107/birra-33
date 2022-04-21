@@ -348,6 +348,17 @@
   transition: all 0.25s ease-in-out;
 }
 
+@media (max-width: 1400px) {
+  .shop-content {
+    width: 90%;
+    font-size: 13px;
+  }
+}
+@media (max-width: 1000px) {
+  .shop-content {
+    font-size: 10px;
+  }
+}
 .shop-content__goldbeer-wrapper {
   background: url("/page/images/jumbo.jpg");
   background-repeat: no-repeat;
@@ -523,6 +534,23 @@
   margin-right: 0.6em;
 }
 
+@media (max-width: 768px) {
+  .shop-sidebar-wrapper {
+    flex-direction: row;
+    width: 90%;
+    align-self: center;
+  }
+
+  .shop-cart {
+    flex: 6;
+  }
+
+  .shop-categories {
+    flex: 6;
+    font-size: 15px;
+    padding-top: 0em;
+  }
+}
 .pagination {
   margin-top: 2em;
 }
@@ -614,9 +642,9 @@
   width: 30.8%;
   background: #e3cfab;
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
 }
 .beer-container__item:hover {
+  transition: all 0.25s ease-in-out;
   background: none;
 }
 .beer-container__item .beer-title-front,
@@ -732,6 +760,15 @@
   height: 3.06em;
 }
 
+@media (max-width: 1000px) {
+  .beer-container {
+    font-size: 10px;
+  }
+
+  .beer-container--btn {
+    font-size: 10px;
+  }
+}
 .shop-beer-list {
   width: 75%;
   position: relative;
@@ -804,6 +841,12 @@
   gap: 2em;
 }
 
+@media (max-width: 768px) {
+  .shop-content-shop {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
 #product {
   background: #f4e8ce;
   padding: 5.52em 0;
@@ -1132,17 +1175,24 @@ header {
   flex-direction: row;
   justify-content: space-between;
 }
-.navibar .navibar__links {
+
+.navibar__links {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   list-style: none;
   margin-bottom: 0;
+  height: 100%;
 }
 
 .navibar__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   padding: 1.8em 1em;
+  height: 100%;
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
   color: #f4e8ce;
@@ -1220,6 +1270,11 @@ header {
   top: 80%;
 }
 
+@media (max-width: 768px) {
+  .navibar__links {
+    display: none;
+  }
+}
 .breadcrumbs-wrapper {
   background: #e3cfab;
 }
@@ -1254,4 +1309,13 @@ header {
   font-size: 0.8em;
   color: #d57f2c;
   margin: 0.8em;
+}
+
+@media (max-width: 1400px) {
+  .nav-info,
+.navibar,
+.breadcrumbs {
+    width: 90%;
+    font-size: 13px;
+  }
 }
