@@ -8,8 +8,6 @@ let tempHeader = Handlebars.compile(headerSource),
 document.getElementById('header-output').innerHTML = tempHeader();
 document.getElementById('footer-output').innerHTML = tempFooter();
 
-// Change amount
-
 const fetchProduct = () => {
   let url = document.location.href,
     id = url.split('?')[1];

@@ -201,9 +201,6 @@
   overflow-y: auto;
   opacity: 0;
   box-shadow: 1px 5px 22px -4px rgba(87, 87, 87, 0.71);
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 .nav-info__cart__item {
   height: 17em;
@@ -370,7 +367,7 @@
   }
 }
 .shop-content__goldbeer-wrapper {
-  background: url("/page/images/jumbo.jpg");
+  background: url("../assets/jumbo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 7.81em 0;
@@ -1061,7 +1058,7 @@
   font-family: "Alegreya", serif;
   font-size: 1.31em;
   color: #e1a03a;
-  margin-top: 1.54em;
+  margin-top: 2.2em;
   margin-bottom: 2.1em;
 }
 #footer ul {
@@ -1081,7 +1078,7 @@
 }
 
 .footer-box {
-  padding: 4.4em 0.5em 4em;
+  padding: 5em 0em 4em;
   width: 61.5%;
   margin-top: 1em;
   margin-bottom: 2.1em;
@@ -1166,6 +1163,10 @@
     text-align: center;
   }
 }
+.links-blog-contacts {
+  margin-top: 2em;
+}
+
 header {
   width: 100%;
 }

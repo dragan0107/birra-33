@@ -29,8 +29,6 @@ function toggleNavi() {
   }
 }
 
-// Beer display class manipulation
-
 function beerDisplay(property) {
   let beerItems = document.querySelectorAll('.beer-container__item');
 

@@ -21,17 +21,14 @@
     width: 0.5em;
   }
 
-  /* Track */
   &::-webkit-scrollbar-track {
     background: $light-brown;
   }
 
-  /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $orange-brown;
   }
 
-  /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }

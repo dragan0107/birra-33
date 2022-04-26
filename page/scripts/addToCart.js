@@ -1,21 +1,17 @@
 let beerItemSource = document.getElementById('cart-item').innerHTML,
   shopItemsTemplate = Handlebars.compile(beerItemSource);
 
-// Helper to stringify the object passed in the function.
 Handlebars.registerHelper('json', function (context) {
   return JSON.stringify(context);
 });
 let shoppingCart = JSON.parse(localStorage.getItem('cart')),
   cartQuantity = 0;
 
-//Initial cart quantity calculation and shop cart render.
+let shopItem = {};
 shoppingCart.forEach((item) => {
   cartQuantity += +item.quantity;
 });
 renderCart();
-
-// Temporary object where we store the last purchased item.
-let shopItem = {};
 
 function addItem(item) {
   let prodAmt = document.getElementById('product-amount');
@@ -57,6 +53,7 @@ function checkDuplicate(item) {
   let idx = shoppingCart.findIndex(
     (el) => el.purchasedItem.name === item.purchasedItem.name
   );
+  console.log(idx);
   if (idx === -1) return false;
   shoppingCart[idx].quantity =
     Number(shoppingCart[idx].quantity) + +item.quantity;

@@ -2,8 +2,6 @@ header {
   width: 100%;
 }
 
-//
-
 .nav-info-wrapper,
 .navibar-wrapper,
 .breadcrumbs-wrapper {
@@ -52,12 +50,10 @@ header {
   @include flex-align-center;
 }
 .socials--header {
-  // margin-left: 2.31em;
   margin-top: 1px;
 }
 .socials__icon-box {
   @include flex-center-all;
-  // border-radius: 50%;
   background: #30211b;
   margin-right: 3.5px;
   transition: $smooth;

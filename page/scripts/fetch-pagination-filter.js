@@ -12,8 +12,6 @@ options.addEventListener('change', () => {
   goToFirst();
 });
 
-// Filter query logic
-
 const dateInputs = document.querySelectorAll('.brewery-range__dates input'),
   foodInputs = document.querySelectorAll('.food-filter input');
 let query,
@@ -47,7 +45,6 @@ beerInput.addEventListener('change', (e) => {
   beerName = `&beer_name=${e.target.value}`;
 });
 
-// Slider Controller Logic
 const rangeInputs = document.querySelectorAll('.abv-range__range-inputs input'),
   progress = document.querySelector('.abv-range__progress');
 let minSpan = document.querySelector('.min-span'),
@@ -83,7 +80,6 @@ function updateAbvSpans(val1, val2) {
 }
 
 function updateQuery(val) {
-  // If there is value, it will reset all filters.
   if (val) {
     dateInputs.forEach((inp) => {
       inp.value = '';
@@ -108,7 +104,6 @@ function updateQuery(val) {
     query = `${beerName}${abvFrom}${abvTo}${brewedAfter}${brewedBefore}${food}`;
   }
 
-  // fetchHelper();
   goToFirst();
 }
 
@@ -143,7 +138,6 @@ const fetchBeers = (page, amount) => {
     });
 };
 
-// Initial beer fetch
 fetchBeers(currentPage, postsPerPage);
 
 nums.forEach((num) => {
@@ -189,9 +183,7 @@ function changePage(val) {
   fetchHelper();
 }
 
-// After manipulating with current page, we refresh the values in the dom with this function.
 function generatePageNums() {
-  // Preventing the page from going below 1.
   if (currentPage < 1) {
     currentPage = 1;
   }
@@ -218,14 +210,12 @@ function generatePageNums() {
   }
 }
 
-// We set the current page to the first again and start all over.
 function goToFirst() {
   currentPage = 1;
   generatePageNums();
   fetchBeers(currentPage, postsPerPage);
 }
 
-// Function that checks how many beers we can fetch per request (because we set the limit to 35);
 function fetchHelper() {
   let beersToFetch;
   if (restOfPosts >= postsPerPage) {
