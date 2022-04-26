@@ -6,7 +6,7 @@
 
 ## Technologies used:
 
-> **HTML, CSS (SASS), GULP, Bootstrap, vanilla JavaScript**
+> **HTML, CSS (SASS), GULP, Bootstrap, Handlebars, JavaScript**
 
 ## Functionalities:
 
