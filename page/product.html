@@ -271,11 +271,16 @@
           </div>
           <hr />
           <div class='product__info__categ-id d-flex flex-column'>
-            <span>Categories:
-              {{#each ingredients.hops}}
-                <span class='product-categ-list'>{{name}},</span>
-              {{/each}}
-            </span>
+            <div>
+
+            </div>
+            <div><span>Categories:</span>
+              <div class='product-categs'>
+                {{#each uniqueCategs}}
+                  <span>{{uniqueCategs}}</span>
+                {{/each}}
+              </div>
+            </div>
             <span class='product-categ-id'>Product ID: {{id}}</span>
           </div>
         </div>

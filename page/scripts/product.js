@@ -17,9 +17,20 @@ const fetchProduct = () => {
   fetch(`https://api.punkapi.com/v2/beers/${id}`)
     .then((res) => res.json())
     .then((data) => {
+      let categs = [];
+      data[0].ingredients.hops.forEach((el) => {
+        categs.push(el.name);
+      });
+      let uniqueCategs = [...new Set(categs)];
       document.getElementById('product-output').innerHTML = tempProduct(
         data[0]
       );
+      uniqueCategs.forEach((el, idx) => {
+        let span = document.createElement('span');
+        span.setAttribute('class', 'product-categ-list');
+        span.innerHTML = idx === uniqueCategs.length - 1 ? `${el}` : `${el}, `;
+        document.querySelector('.product-categs').appendChild(span);
+      });
       document.querySelector('.breadcrumbs__beer-name').innerHTML =
         data[0].name;
       document.title = `${data[0].name} – Brewery & pub`;

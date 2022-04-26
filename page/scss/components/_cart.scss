@@ -52,6 +52,10 @@
     font-size: 0.88em;
   }
 }
+.cart-item__quantity {
+  color: $beer-desc;
+  font-weight: bold;
+}
 
 .cart-item__image {
   height: 65%;

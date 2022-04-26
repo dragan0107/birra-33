@@ -107,6 +107,16 @@
       }
     }
   }
+  .product-categs {
+    display: inline-block;
+  }
+  .product-categ-list {
+    cursor: pointer;
+    transition: $smooth;
+    &:hover {
+      color: $hover-brown;
+    }
+  }
   &__categ-id {
     margin-top: 0.25em;
     font-size: 0.875em;
@@ -137,9 +147,10 @@
       flex: 3;
     }
     img {
-      width: 28%;
+      width: 25%;
     }
     &__details {
+      margin-top: 2em;
       flex: 9;
     }
     &__addcart {

@@ -566,7 +566,10 @@
         >
           <div class='cart-item__info'>
             <h3>{{this.purchasedItem.name}}</h3>
-            <span>Quantity: {{this.quantity}}</span>
+            <span>Quantity:
+              <span class='cart-item__quantity'>
+                {{this.quantity}}
+              </span></span>
           </div>
           <div class='cart-item__image'>
             <img src={{this.purchasedItem.image_url}} alt='' />

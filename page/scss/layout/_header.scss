@@ -135,3 +135,15 @@ header {
     font-size: 13px;
   }
 }
+@media (max-width: $max-mobile) {
+  .nav-info-wrapper {
+    height: auto;
+    padding: 0.5em 0;
+  }
+  .nav-info {
+    flex-direction: column;
+  }
+  .breadcrumbs {
+    font-size: 11px;
+  }
+}
