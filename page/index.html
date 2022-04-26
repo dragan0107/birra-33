@@ -19,7 +19,7 @@
     />
 
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="icon" href="./assets/favicon.ico" />
     <title>Products – Brewery & pub</title>
   </head>
   <body>
@@ -67,11 +67,7 @@
         <div class="navibar-wrapper">
           <nav class="navibar">
             <a class="navibar__logo" href="#">
-              <img
-                src="http://brewery.ancorathemes.com/wp-content/uploads/2016/03/logo.png"
-                alt=""
-                loading="lazy"
-              />
+              <img src="./assets/logo.png" alt="" loading="lazy" />
             </a>
             <ul class="navibar__links">
               <li class="navibar__link">HOME</li>
@@ -508,7 +504,9 @@
           </div>
           <div class='beer-container__information'>
             <h1 class='beer-title-front'>{{name}} </h1>
-            <p class='beer-desc-front'>{{description}}</p>
+            <div class='beer-desc-front-wrapper'>
+              <p class='beer-desc-front'>{{description}}</p>
+            </div>
             <span class='beer-container__price'>${{ibu}}</span>
             <button
               class='shopbtn beer-container--btn'
@@ -582,6 +580,6 @@
     </script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/fetch-pagination-filter.js"></script>
-    <script src="./scripts/addToCart.js"></script>
+    <script src="./scripts/add-to-cart.js"></script>
   </body>
 </html>

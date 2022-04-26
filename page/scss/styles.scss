@@ -1,24 +1,19 @@
-// Reset
 @import './base/global-reset';
 
-// Base
 @import './base/base';
 @import './base/mixins';
 
-// Components
 @import './components/scroll-top';
 @import './components/beer-desc-modal';
 @import './components/beer-addcart-modal';
-@import './components/loadingSpinner';
+@import './components/spinner';
 @import './components/cart';
 @import './components/abv-range';
+@import './components/gold-beer';
 
-// Sections
 @import './sections/shop-wrapper';
-@import './sections/gold-beer';
 @import './sections/shop';
 @import './sections/product';
 
-// Layout
 @import './layout/footer';
 @import './layout/header';

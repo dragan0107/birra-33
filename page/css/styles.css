@@ -321,6 +321,47 @@
   font-size: 14px;
 }
 
+.shop-content__goldbeer-wrapper {
+  background: url("../assets/jumbo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7.81em 0;
+}
+
+.shop-content__goldbeer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5em 6.18em 1.06em;
+  text-align: center;
+}
+.shop-content__goldbeer h1 {
+  font-family: "Alegreya", serif;
+  font-size: 4em;
+  color: white;
+  margin-bottom: 0.25em;
+}
+.shop-content__goldbeer p {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: #eee2c8;
+  font-size: 1.375em;
+  line-height: 1.3em;
+}
+.shop-content__goldbeer--btn {
+  width: 17.56em;
+  height: 3.56em;
+  margin-top: 2.4em;
+  background: #bf431f;
+}
+.shop-content__goldbeer--btn span {
+  font-size: 1.06em;
+}
+.shop-content__goldbeer--btn:hover {
+  background: #7a3319;
+}
+
 #shop {
   display: flex;
   justify-content: center;
@@ -366,47 +407,6 @@
     font-size: 10px;
   }
 }
-.shop-content__goldbeer-wrapper {
-  background: url("../assets/jumbo.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 7.81em 0;
-}
-
-.shop-content__goldbeer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2.5em 6.18em 1.06em;
-  text-align: center;
-}
-.shop-content__goldbeer h1 {
-  font-family: "Alegreya", serif;
-  font-size: 4em;
-  color: white;
-  margin-bottom: 0.25em;
-}
-.shop-content__goldbeer p {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
-  color: #eee2c8;
-  font-size: 1.375em;
-  line-height: 1.3em;
-}
-.shop-content__goldbeer--btn {
-  width: 17.56em;
-  height: 3.56em;
-  margin-top: 2.4em;
-  background: #bf431f;
-}
-.shop-content__goldbeer--btn span {
-  font-size: 1.06em;
-}
-.shop-content__goldbeer--btn:hover {
-  background: #7a3319;
-}
-
 .shop-sidebar-wrapper,
 .shop-cart {
   display: flex;
@@ -656,6 +656,10 @@
   transition: all 0.25s ease-in-out;
   background: none;
 }
+.beer-container__item .beer-desc-front-wrapper {
+  overflow-y: scroll;
+  height: 90%;
+}
 .beer-container__item .beer-title-front,
 .beer-container__item .beer-desc-front {
   display: none;
@@ -716,6 +720,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  max-height: 100%;
 }
 
 .beer-container__item--long {
@@ -782,6 +787,11 @@
   .beer-container__item {
     width: 80%;
     height: 30em;
+  }
+
+  .beer-container__item--long .beer-container__image {
+    height: 80%;
+    margin-right: 0.8em;
   }
 }
 .shop-beer-list {
