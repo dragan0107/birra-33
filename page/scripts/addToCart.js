@@ -4,7 +4,10 @@ let beerItemSource = document.getElementById('cart-item').innerHTML,
 Handlebars.registerHelper('json', function (context) {
   return JSON.stringify(context);
 });
-let shoppingCart = JSON.parse(localStorage.getItem('cart')),
+let cart = localStorage.getItem('cart');
+if (!cart) localStorage.setItem('cart', JSON.stringify([]));
+
+let shoppingCart = JSON.parse(cart),
   cartQuantity = 0;
 
 let shopItem = {};
@@ -19,6 +22,7 @@ function addItem(item) {
     changeQuantity(prodAmt.value);
   }
   shopItem.purchasedItem = item;
+  console.log(shopItem);
   if (shopItem.quantity) {
     let duplicate = checkDuplicate(shopItem);
     if (!duplicate) {

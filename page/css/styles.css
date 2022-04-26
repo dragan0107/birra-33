@@ -1052,7 +1052,7 @@
   }
 }
 #footer {
-  background: url("/page/images/footer.jpg");
+  background: url("../assets/footer.jpg");
 }
 #footer h3 {
   font-family: "Alegreya", serif;
