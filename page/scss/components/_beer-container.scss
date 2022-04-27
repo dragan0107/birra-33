@@ -29,7 +29,7 @@
       background: none;
     }
     .beer-desc-front-wrapper {
-      overflow-y: scroll;
+      overflow-y: auto;
       height: 90%;
     }
 
@@ -145,9 +145,7 @@
 }
 
 @media (max-width: $max-medium) {
-  .beer-container {
-    font-size: 10px;
-  }
+  .beer-container,
   .beer-container--btn {
     font-size: 10px;
   }
@@ -155,11 +153,12 @@
 @media (max-width: $max-mobile) {
   .beer-container {
     &__item {
-      width: 80%;
+      width: 70%;
       height: 30em;
     }
   }
   .beer-container__item--long {
+    width: 85%;
     .beer-container__image {
       height: 80%;
       margin-right: 0.8em;

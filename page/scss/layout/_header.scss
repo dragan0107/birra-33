@@ -131,12 +131,15 @@ header {
 @media (max-width: $max-mobile) {
   .nav-info-wrapper {
     height: auto;
-    padding: 0.5em 0;
+    padding: 0.4em 0;
   }
   .nav-info {
     flex-direction: column;
   }
   .breadcrumbs {
     font-size: 11px;
+  }
+  .nav-info__cart-wrapper {
+    margin: 0.9em;
   }
 }
