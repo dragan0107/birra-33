@@ -31,12 +31,15 @@ function toggleNavi() {
 
 function beerDisplay(property) {
   let beerItems = document.querySelectorAll('.beer-container__item');
+  let beerContainer = document.querySelector('.beer-container');
 
   if (property === 'horizontal') {
+    beerContainer.classList.add('beer-container--long');
     return beerItems.forEach((beer) =>
       beer.classList.add('beer-container__item--long')
     );
   }
+  beerContainer.classList.remove('beer-container--long');
   beerItems.forEach((beer) =>
     beer.classList.remove('beer-container__item--long')
   );

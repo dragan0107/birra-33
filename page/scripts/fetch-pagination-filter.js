@@ -208,6 +208,7 @@ function generatePageNums() {
       .querySelectorAll('.page-arrow-left')
       .forEach((el) => (el.style.display = 'block'));
   }
+  beerDisplay();
 }
 
 function goToFirst() {

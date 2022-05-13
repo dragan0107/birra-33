@@ -250,32 +250,31 @@
             </div>
           </div>
           <div class="shop-beer-list">
-            <div class="shop-beer-list__display">
-              <div class="shop-beer-list__display-icons">
-                <i onclick="beerDisplay()" class="fa-solid fa-grip"></i>
-                <i
-                  onclick="beerDisplay('horizontal')"
-                  class="fa-solid fa-list"
-                ></i>
-                <span class="results-showing">Showing 1-9 of 10 results</span>
+            <div class="shop-beer-list-top-wrapper">
+              <div class="shop-beer-list__display">
+                <div class="shop-beer-list__display-icons">
+                  <i onclick="beerDisplay()" class="fa-solid fa-grip"></i>
+                  <i
+                    onclick="beerDisplay('horizontal')"
+                    class="fa-solid fa-list"
+                  ></i>
+                  <span class="results-showing">Showing 1-9 of 10 results</span>
+                </div>
               </div>
+              <select class="shop-beer-list-selector rounded" name="" id="">
+                <option class="shop-beer-list-selector__option" value="10">
+                  Show 10
+                </option>
+                <option class="shop-beer-list-selector__option" value="20">
+                  Show 20
+                </option>
+                <option class="shop-beer-list-selector__option" value="35">
+                  Show All
+                </option>
+              </select>
             </div>
-            <select class="shop-beer-list-selector rounded" name="" id="">
-              <option class="shop-beer-list-selector__option" value="10">
-                Show 10
-              </option>
-              <option class="shop-beer-list-selector__option" value="20">
-                Show 20
-              </option>
-              <option class="shop-beer-list-selector__option" value="35">
-                Show All
-              </option>
-            </select>
             <div class="beer-output-wrapper">
-              <div
-                id="beer-output"
-                class="beer-container d-flex flex-wrap justify-content-center"
-              ></div>
+              <div id="beer-output" class="beer-container"></div>
               <h4 class="no-results-notification">No results found.</h4>
               <div class="ellipsis-wrapper">
                 <div id="loading-spinner" class="lds-ellipsis">

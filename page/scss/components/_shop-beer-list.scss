@@ -4,6 +4,7 @@
 .shop-beer-list {
   width: 75%;
   position: relative;
+
   &__display-icons {
     position: absolute;
     left: 0;
@@ -29,6 +30,10 @@
       margin-left: 0.6em;
     }
   }
+}
+
+.shop-beer-list-top-wrapper {
+  z-index: 1;
 }
 .shop-beer-list-selector,
 .shop-beer-list-selector__option {
