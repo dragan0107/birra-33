@@ -1,6 +1,6 @@
 # **Birra 33 - Beer catalogue and shop application.**
 
-## [Click here for demo.](https://drip016.github.io/birra-33/page/index.html)
+## [Click here for demo.](https://dragan0107.github.io/birra-33/page/index.html)
 
 > ### In this project, I had to recreate the entire shop from scratch, based on the reference theme I was given. After that, I started adding more and more functionalities to make it more complex. The front-end of the app communicates with the external API and fetches beers and displays them in the shop list.
 
